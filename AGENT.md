@@ -19,7 +19,7 @@ Work autonomously; nobody will reply. Only touch this repository.
   every post is labelled AI-generated on each platform.
 
 ## Steps
-1. `pip install -r requirements.txt -q`. Compute today's IST date `D` (YYYY-MM-DD).
+1. `python3 -m pip install -q --force-reinstall --ignore-installed -r requirements.txt` (the system Pillow is broken). Compute today's IST date `D` (YYYY-MM-DD).
 2. Duplicate check: if `daily/D/posted.txt` exists, or `getScheduledPosts` for brandId 7889447 (today, +05:30)
    already shows a post for today, stop and report "already done".
 3. Topic: the first entry in topics.md whose number is not in history.md (after #40, wrap around and give the
