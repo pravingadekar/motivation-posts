@@ -1,16 +1,11 @@
 {
  "date": "2026-11-05",
  "topic": "1. Log kya kahenge",
- "hook": "Ye video sirf tumhare liye hai",
+ "hook": "Log kya kahenge? Pehle ye suno",
+ "emotion": "calm, warm and intense, like a heart-to-heart talk",
  "shots": [
-  {
-   "dialogue": "Agar tum har kaam se pehle sochte ho ki *log kya kahenge*, toh suno."
-  },
-  {
-   "dialogue": "Log tab bhi bolenge jab tum haaroge, aur tab bhi jab tum *jeetoge*."
-  },
-  {
-   "dialogue": "Isliye *sapno* pe dhyan do, logon pe nahi. Baat sahi lagi toh *follow* karo."
-  }
+  {"dialogue": "Agar tum apna sapna sirf isliye rok rahe ho ki *log kya kahenge*, toh suno."},
+  {"dialogue": "Wahi log kal tumhari *kamyabi* ki kahani sunayenge, jo aaj tum par hans rahe hain."},
+  {"dialogue": "Toh darr chhodo aur *shuru* karo. Ye video us dost ko bhejo jise zaroorat hai."}
  ]
 }
