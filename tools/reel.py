@@ -233,8 +233,7 @@ def cmd_build(day):
         total = duration(joined)
 
         # overlays: handle (whole reel), hook (first 3 s), caption pieces timed across each shot's speech
-        overlays = [(os.path.join(tmp, "handle.png"), 0, total)]
-        handle_png(overlays[0][0])
+        overlays = []   # no @handle watermark (user asked to remove it)
         hp = os.path.join(tmp, "hook.png")
         hook_png(s["hook"], hp)
         overlays.append((hp, 0, 3.0))
