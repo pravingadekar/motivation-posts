@@ -131,7 +131,7 @@ def font(weight, size):
 
 def chunks(caption):
     """Split a caption into 1-3 word pieces, breaking at punctuation. Each word keeps its *highlight* flag."""
-    words = [(w.strip("*"), w.startswith("*") or w.endswith("*")) for w in caption.split()]
+    words = [(w.replace("*", ""), "*" in w) for w in caption.split()]
     out, cur = [], []
     for w, hl in words:
         cur.append((w, hl))
