@@ -23,14 +23,21 @@ Work autonomously; nobody will reply. Only touch this repository.
 2. Duplicate check: if `daily/D/posted.txt` exists, or `getScheduledPosts` for brandId 7889447 (today, +05:30)
    already shows a post for today, stop and report "already done".
 3. Topic: the first entry in topics.md whose number is not in history.md (after #40, wrap around and give the
-   topic a fresh angle).
+   topic a fresh angle). Read the last 3 lines of history.md (and their daily/*/script.json): never repeat a hook or
+   line, and connect to the story when it fits (a running series: e.g. shot 1 can open with "Kal humne baat ki thi
+   <yesterday's topic>... aaj uska doosra sach." about once or twice a week, not every day). If history.md has a
+   `views:` note for a topic that did well, lean into that style of hook.
 4. Write `daily/D/script.json` (see the docstring of tools/reel.py):
    - `hook`: on-screen hook, Hinglish, max 7 words, curiosity or emotion ("Ye video tumhare liye hai").
-   - exactly **3 shots**; each `dialogue` is one natural spoken Hinglish line in Roman script, **14-20 words**,
-     2-3 short sentences, simple everyday Hindi (Indian audience, 18-35). Mark 1-2 key words per shot with `*stars*`.
-     No double quotes, no emojis, no numerals (write numbers as words).
+   - exactly **3 shots** (one per camera angle); each `dialogue` is one natural spoken Hinglish line in Roman script,
+     **12-15 words** (8-second clips), simple everyday Hindi (Indian audience, 18-35). Mark 1-2 key words per shot
+     with `*stars*`. No double quotes, no emojis, no numerals (write numbers as words).
+   - Make it SHAREABLE: a relatable, specific situation people send to a friend/sibling/partner ("Ye un logon ke
+     liye jo sabka khayal rakhte hain, par apna nahi"), one quotable line, no generic filler.
    - Shot 1 = strong hook that names the viewer's pain ("Agar log tumhe kamzor samajhte hain..."),
-     shot 2 = the turn / truth, shot 3 = payoff line + soft CTA ("...Agar ye baat dil ko chhu gayi, toh follow karo.").
+     shot 2 = the turn / truth, shot 3 = payoff line + share CTA ("...Ye video us dost ko bhejo jise aaj iski
+     zaroorat hai." or "...follow karo, kal ek aur sach batungi.").
+   - Captions (step 7) end with a share line like "Ye reel us insaan ko bhejo jo haar maanne wala hai 💌".
 5. Check `[ -n "$GEMINI_API_KEY" ] && echo SET || echo MISSING` (never print the value).
    - SET: `python tools/reel.py prompts daily/D` then `python tools/reel.py clips daily/D`.
      If one shot fails (HTTP error or no video), retry only that shot (within the budget).
