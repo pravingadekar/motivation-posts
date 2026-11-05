@@ -120,6 +120,8 @@ def speech_window(path):
         s0 = ends[0]
     if starts and (len(ends) < len(starts) or ends[-1] >= dur - 0.05) and starts[-1] > s0 + 1:
         s1 = starts[-1]
+    if s1 - s0 < 1.0:   # silent clip (still fallback) or detection failed: keep the whole clip
+        s0, s1 = 0.0, dur
     return s0, s1, dur
 
 
@@ -261,7 +263,7 @@ def cmd_build(day):
             lbl = f"[v{j}]"
             fc.append(f"{last}[{j + 2}:v]overlay=0:0:enable='between(t,{t0:.3f},{t1:.3f})'{lbl}")
             last = lbl
-        fc.append(f"[0:a]volume=1.0[va];[1:a]volume={MUSIC_VOL}[ma];"
+        fc.append(f"[0:a]volume=1.0[va];[1:a]volume={s.get('music_vol', MUSIC_VOL)}[ma];"
                   f"[va][ma]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11[a]")
         r = run(args + ["-filter_complex", ";".join(fc), "-map", last, "-map", "[a]",
                         "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p",
@@ -282,5 +284,28 @@ def cmd_build(day):
         print(f"  shot{t['shot']}: speech {t['speech'][1] - t['speech'][0]:.1f}s of {t['len']:.1f}s")
 
 
+def cmd_still(day):
+    """Fallback without GEMINI_API_KEY: slow push-in on character/host.png per shot (silent), then build with music."""
+    s = load(day)
+    s.setdefault("music_vol", 0.6)
+    with open(os.path.join(day, "script.json"), "w", encoding="utf-8") as f:
+        json.dump(s, f, ensure_ascii=False, indent=1)
+    os.makedirs(os.path.join(day, "clips"), exist_ok=True)
+    for i, shot in enumerate(s["shots"], start=1):
+        dur = round(0.45 * len(spoken(shot["dialogue"]).split()) + 1.0, 2)
+        frames = int(dur * FPS)
+        z0, z1 = (1.0, 1.12) if i % 2 else (1.12, 1.0)
+        zexpr = f"{z0}+({z1}-{z0})*on/{frames}"
+        r = run(["-i", HOST, "-f", "lavfi", "-t", str(dur), "-i", "anullsrc=r=44100:cl=stereo",
+                 "-filter_complex",
+                 f"[0:v]scale={W * 2}:{H * 2}:force_original_aspect_ratio=increase,crop={W * 2}:{H * 2},"
+                 f"zoompan=z='{zexpr}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={frames}:s={W}x{H}:fps={FPS}[v]",
+                 "-map", "[v]", "-map", "1:a", "-t", str(dur), "-c:v", "libx264", "-pix_fmt", "yuv420p",
+                 "-c:a", "aac", os.path.join(day, "clips", f"shot{i}.mp4")])
+        if r.returncode:
+            sys.exit(r.stderr[-1500:])
+    cmd_build(day)
+
+
 if __name__ == "__main__":
-    {"prompts": cmd_prompts, "clips": cmd_clips, "build": cmd_build}[sys.argv[1]](sys.argv[2].rstrip("/\\"))
+    {"prompts": cmd_prompts, "clips": cmd_clips, "build": cmd_build, "still": cmd_still}[sys.argv[1]](sys.argv[2].rstrip("/\\"))
