@@ -38,18 +38,19 @@ HANDLE = "@ai__wala_motivational_guru"
 MAX_WORDS = 22          # per 10-second clip
 MUSIC_VOL = 0.13
 RES = "720p"
+# one camera angle per shot; reference images character/host.png, host_angle2.png, host_angle3.png match these
 CAMERAS = [
-    "Medium close-up from the front at eye level, she looks straight into the camera. Very slow push-in.",
-    "Close-up from a slight side angle (three-quarter view), she looks into the camera for the key words. Locked-off camera.",
-    "Medium shot from the front, she leans slightly towards the camera and gestures gently with one hand. Very slow push-in.",
-    "Close-up from the front, softer and more personal, she looks straight into the camera. Locked-off camera.",
+    "ANGLE 1 (front): medium close-up from the front at eye level, she looks straight into the camera. Very slow push-in.",
+    "ANGLE 2 (close side): tighter close-up from a three-quarter side angle on her left, she speaks into the mic and turns to the camera for the key words. Locked-off camera.",
+    "ANGLE 3 (wide side): medium-wide shot from her right side showing the desk, laptop and coffee mug, she gestures gently with one hand while talking, then looks into the camera at the end. Very slow push-in.",
 ]
+ANGLE_REFS = ["host.png", "host_angle2.png", "host_angle3.png"]
 PROMPT = """Vertical 9:16 photorealistic podcast video. The young Indian woman from <IMAGE_REF_0> (exactly the same face, hairstyle, outfit and cozy podcast studio as in the reference) sits at the desk and speaks into the black studio microphone on a boom arm in front of her.
 Camera: {camera}
 She speaks in Hindi, {emotion}, with clear natural lip movement matching every word: "{line}"
 Voice: young Indian woman in her mid-twenties, warm, confident and soulful, medium pitch, clear Hindi with a natural Indian accent, steady motivational pace with small pauses. The same voice in every clip.
 Audio: only her voice and a very faint room tone. No music, no sound effects.
-Look: warm soft key light from the left, gentle rim light, softly blurred studio background with warm bokeh lights, natural skin texture, realistic hands.
+Look: bright, airy, high-key podcast studio full of soft daylight (white walls, big window with sheer curtains, plants, ring light), fresh and cheerful, natural skin texture, realistic hands. Never dark or moody.
 She finishes the whole line, then holds a calm confident look for about half a second.
 IMPORTANT: absolutely no captions, subtitles or on-screen text of any kind, no logos, no writing anywhere. Clean video frame only."""
 
