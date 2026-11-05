@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-05",
+  "topic": "1. Log kya kahenge",
+  "hook": "Ye video sirf tumhare liye hai",
+  "shots": [
+    {
+      "dialogue": "Agar tum har kaam se pehle sochte ho ki *log kya kahenge*, toh meri ek baat dil se suno.",
+      "hindi": "अगर तुम हर काम से पहले सोचते हो कि लोग क्या कहेंगे, तो मेरी एक बात दिल से सुनो।"
+    },
+    {
+      "dialogue": "Log tab bhi bolenge jab tum haaroge, aur tab bhi jab tum *jeetoge*. Unki baatein kabhi khatam nahi hongi.",
+      "hindi": "लोग तब भी बोलेंगे जब तुम हारोगे, और तब भी जब तुम जीतोगे। उनकी बातें कभी खत्म नहीं होंगी।"
+    },
+    {
+      "dialogue": "Isliye apne *sapno* pe dhyan do, logon pe nahi. Agar baat dil ko chhu gayi, toh pyaar se *follow* karo.",
+      "hindi": "इसलिए अपने सपनों पे ध्यान दो, लोगों पे नहीं। अगर बात दिल को छू गई, तो प्यार से फॉलो करो।"
+    }
+  ]
+}
