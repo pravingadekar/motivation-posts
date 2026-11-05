@@ -31,8 +31,12 @@ Work autonomously; nobody will reply. Only touch this repository.
      No double quotes, no emojis, no numerals (write numbers as words).
    - Shot 1 = strong hook that names the viewer's pain ("Agar log tumhe kamzor samajhte hain..."),
      shot 2 = the turn / truth, shot 3 = payoff line + soft CTA ("...Agar ye baat dil ko chhu gayi, toh follow karo.").
-5. `python tools/reel.py prompts daily/D` then `python tools/reel.py clips daily/D`.
-   If one shot fails (HTTP error or no video), retry only that shot (within the budget).
+5. Check `[ -n "$GEMINI_API_KEY" ] && echo SET || echo MISSING` (never print the value).
+   - SET: `python tools/reel.py prompts daily/D` then `python tools/reel.py clips daily/D`.
+     If one shot fails (HTTP error or no video), retry only that shot (within the budget).
+   - MISSING (or every Gemini call fails with an auth/billing error): fallback
+     `python tools/reel.py still daily/D` (slow zoom on character/host.png, captions and music, no voice),
+     skip step 6's voice checks, and say in the final report that the fallback was used.
 6. `python tools/reel.py build daily/D`. Open `daily/D/check/*.jpg` and look at each:
    same woman as character/host.png, podcast studio, no garbled on-screen text from the model, captions readable.
    Also check the build output: each shot's speech should be at least 4 s. If a shot is wrong (different person,
