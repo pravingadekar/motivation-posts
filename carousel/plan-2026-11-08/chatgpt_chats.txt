@@ -1,0 +1,4 @@
+ChatGPT chats holding the generated scenes (in order sent). Save with a blob fetch + download once Chrome stops asking where to save.
+2026-11-11 https://chatgpt.com/c/6aee00f9-2f40-83e8-b198-befce83f48b8  order sent: scene4, scene1, scene2, scene3, scene5, scene6, scene7
+2026-11-12 https://chatgpt.com/c/6aee033d-f47c-83ee-a173-4b38fe3825fc  order sent: scene1..7
+2026-11-13 https://chatgpt.com/c/6aee053f-7b74-83ee-8a48-15235eb94803  order sent: scene1..7
