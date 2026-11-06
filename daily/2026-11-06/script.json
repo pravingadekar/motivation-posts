@@ -1,0 +1,14 @@
+{
+ "date": "2026-11-06",
+ "topic": "2. Haar ke baad uthna",
+ "hook": "Haar gaye ho? Ye tumhare liye hai",
+ "emotion": "calm, warm and intense, like a heart-to-heart talk",
+ "shots": [
+  {"dialogue": "Agar *haarne* ke baad tum sochte ho ki ab kuch nahi hoga, toh ruko.",
+   "dialogue_hi": "अगर हारने के बाद तुम सोचते हो कि अब कुछ नहीं होगा, तो रुको।"},
+  {"dialogue": "Ek haar tumhara *ant* nahi hoti, wo bas naya raasta dikhati hai.",
+   "dialogue_hi": "एक हार तुम्हारा अंत नहीं होती, वो बस नया रास्ता दिखाती है।"},
+  {"dialogue": "Toh *phir se uth* jao. Ye video us dost ko bhejo jo thak gaya hai.",
+   "dialogue_hi": "तो फिर से उठ जाओ। ये वीडियो उस दोस्त को भेजो जो थक गया है।"}
+ ]
+}
