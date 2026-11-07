@@ -1,0 +1,14 @@
+{
+ "date": "2026-11-07",
+ "topic": "3. Subah jaldi uthne ki aadat",
+ "hook": "Alarm band karke phir so jaate ho?",
+ "emotion": "warm, friendly and gently teasing, then sincere, like a heart-to-heart talk",
+ "shots": [
+  {"dialogue": "Roz *alarm* band karke phir so jaate ho, aur kehte ho kal se pakka.",
+   "dialogue_hi": "रोज़ अलार्म बंद करके फिर सो जाते हो, और कहते हो कल से पक्का।"},
+  {"dialogue": "Din ki *pehli jeet* bistar se uthna hai, baaki sab uske baad aata hai.",
+   "dialogue_hi": "दिन की पहली जीत बिस्तर से उठना है, बाकी सब उसके बाद आता है।"},
+  {"dialogue": "Kal *das minute* pehle utho. Ye video us dost ko bhejo jo alarm nahi sunta.",
+   "dialogue_hi": "कल दस मिनट पहले उठो। ये वीडियो उस दोस्त को भेजो जो अलार्म नहीं सुनता।"}
+ ]
+}
