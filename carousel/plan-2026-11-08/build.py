@@ -59,10 +59,12 @@ def page(date, n, spec):
     rows = "".join(f"<div>{ln}</div>" for ln in lines)
     chapter = f'<div class="chapter">अध्याय {n - 1}</div>' if spec["style"] == "kraft" and n > 1 else ""
     note = f'<div class="note">{spec["note"]}</div>' if n == total else ""
+    top = spec.get("box_top", {}).get(n)  # move the caption box when it would hide the point of the scene
+    box_style = f' style="top:{top}px;bottom:auto"' if top else ""
     arrow = '<div class="arrow">&#10230;</div>' if n < total else ""
     return (f'<!doctype html><html lang="hi"><head><meta charset="utf-8">{LINK}<style>{STYLES[spec["style"]]}</style></head>'
             f"<body><div class=\"bg\" style=\"background-image:url('file:///{bg}')\"></div>"
-            f'<div class="box">{chapter}{rows}{note}</div>{arrow}<div class="handle">{HANDLE}</div></body></html>')
+            f'<div class="box"{box_style}>{chapter}{rows}{note}</div>{arrow}<div class="handle">{HANDLE}</div></body></html>')
 
 
 def main():
