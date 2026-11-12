@@ -6,3 +6,5 @@ checkpoints/
 *.safetensors
 *.pth
 *.pth.tar
+golu/story-01/build/
+golu/story-01/voice/*.wav

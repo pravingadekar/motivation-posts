@@ -1,0 +1,422 @@
+{
+ "scenes": [
+  {
+   "id": 1,
+   "start": 4.0,
+   "dur": 15.882,
+   "lines": [
+    {
+     "who": "narrator",
+     "hi": "एक हरे-भरे जंगल में रहता था गोलू बंदर। छोटा सा, नटखट सा, और हमेशा खुश!",
+     "start": 0.6,
+     "dur": 6.613,
+     "file": "golu/story-01/voice/s01_l0.wav",
+     "abs": 4.6
+    },
+    {
+     "who": "narrator",
+     "hi": "गोलू को आम बहुत पसंद थे। पीले-पीले, मीठे-मीठे आम!",
+     "start": 7.663,
+     "dur": 3.914,
+     "file": "golu/story-01/voice/s01_l1.wav",
+     "abs": 11.663
+    },
+    {
+     "who": "golu",
+     "hi": "उल्लू-लू-लू! हेलो दोस्तों! मैं हूँ गोलू!",
+     "start": 12.027,
+     "dur": 2.755,
+     "file": "golu/story-01/voice/s01_l2.wav",
+     "abs": 16.027
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "start": 19.882,
+   "dur": 10.685,
+   "lines": [
+    {
+     "who": "narrator",
+     "hi": "एक दिन गोलू झूलते-झूलते... धप्प! एक अनोखे पेड़ के नीचे गिर गया।",
+     "start": 0.6,
+     "dur": 5.628,
+     "file": "golu/story-01/voice/s02_l0.wav",
+     "abs": 20.482
+    },
+    {
+     "who": "golu",
+     "hi": "अरे! ये कौन सा पेड़ है? ये तो चमक रहा है!",
+     "start": 6.678,
+     "dur": 2.306,
+     "file": "golu/story-01/voice/s02_l1.wav",
+     "abs": 26.56
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "start": 30.567,
+   "dur": 7.321,
+   "lines": [
+    {
+     "who": "ped",
+     "hi": "मैं हूँ जादुई आम का पेड़। जो प्यार से गाना गाए, उसे मिलता है मीठा आम!",
+     "start": 0.6,
+     "dur": 5.921,
+     "file": "golu/story-01/voice/s03_l0.wav",
+     "abs": 31.167
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "start": 37.888,
+   "dur": 11.368,
+   "lines": [
+    {
+     "who": "golu",
+     "hi": "आम मीठा... दिल भी मीठा... बाँटो तो... सब कुछ मीठा!",
+     "start": 0.6,
+     "dur": 4.368,
+     "file": "golu/story-01/voice/s04_l0.wav",
+     "abs": 38.488
+    },
+    {
+     "who": "narrator",
+     "hi": "टपक! एक सुनहरा आम नीचे आ गया।",
+     "start": 5.418,
+     "dur": 2.577,
+     "file": "golu/story-01/voice/s04_l1.wav",
+     "abs": 43.306
+    },
+    {
+     "who": "golu",
+     "hi": "वाह! जादू! सच में जादू!",
+     "start": 8.445,
+     "dur": 1.523,
+     "file": "golu/story-01/voice/s04_l2.wav",
+     "abs": 46.333
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "start": 49.256,
+   "dur": 8.151,
+   "lines": [
+    {
+     "who": "golu",
+     "hi": "म्म्म! कितना मीठा! अब मैं सारे आम अकेले खाऊँगा। किसी को नहीं बताऊँगा!",
+     "start": 0.6,
+     "dur": 6.751,
+     "file": "golu/story-01/voice/s05_l0.wav",
+     "abs": 49.856
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "start": 57.407,
+   "dur": 9.863,
+   "lines": [
+    {
+     "who": "narrator",
+     "hi": "गोलू ने आम तोड़ने शुरू किए। एक, दो, तीन... ढेर लगा दिया!",
+     "start": 0.6,
+     "dur": 4.669,
+     "file": "golu/story-01/voice/s06_l0.wav",
+     "abs": 58.007
+    },
+    {
+     "who": "golu",
+     "hi": "ये भी मेरा, वो भी मेरा... सारे आम मेरे!",
+     "start": 5.719,
+     "dur": 2.345,
+     "file": "golu/story-01/voice/s06_l1.wav",
+     "abs": 63.126
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "start": 67.271,
+   "dur": 8.939,
+   "lines": [
+    {
+     "who": "pinky",
+     "hi": "भैया! मुझे भी एक आम दो ना, बहुत भूख लगी है।",
+     "start": 0.6,
+     "dur": 2.63,
+     "file": "golu/story-01/voice/s07_l0.wav",
+     "abs": 67.871
+    },
+    {
+     "who": "golu",
+     "hi": "नहीं पिंकी! ये सब मेरे आम हैं!",
+     "start": 3.68,
+     "dur": 1.758,
+     "file": "golu/story-01/voice/s07_l1.wav",
+     "abs": 70.951
+    },
+    {
+     "who": "narrator",
+     "hi": "बेचारी पिंकी की आँखों में आँसू आ गए।",
+     "start": 5.888,
+     "dur": 2.251,
+     "file": "golu/story-01/voice/s07_l2.wav",
+     "abs": 73.159
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "start": 76.21,
+   "dur": 10.731,
+   "lines": [
+    {
+     "who": "haathi",
+     "hi": "गोलू बेटा, आज बहुत गर्मी है। एक आम मिल जाए तो प्यास बुझ जाए।",
+     "start": 0.6,
+     "dur": 4.171,
+     "file": "golu/story-01/voice/s08_l0.wav",
+     "abs": 76.81
+    },
+    {
+     "who": "golu",
+     "hi": "नहीं दादा! सब मेरे हैं!",
+     "start": 5.221,
+     "dur": 1.175,
+     "file": "golu/story-01/voice/s08_l1.wav",
+     "abs": 81.431
+    },
+    {
+     "who": "narrator",
+     "hi": "हाथी दादा धीरे-धीरे पेड़ की छाँव में बैठ गए।",
+     "start": 6.846,
+     "dur": 3.085,
+     "file": "golu/story-01/voice/s08_l2.wav",
+     "abs": 83.056
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "start": 86.941,
+   "dur": 11.041,
+   "lines": [
+    {
+     "who": "narrator",
+     "hi": "गोलू ने नया आम खाया... और...",
+     "start": 0.6,
+     "dur": 2.226,
+     "file": "golu/story-01/voice/s09_l0.wav",
+     "abs": 87.541
+    },
+    {
+     "who": "golu",
+     "hi": "थू! छी! ये तो खट्टा है! बहुत खट्टा!",
+     "start": 3.276,
+     "dur": 2.731,
+     "file": "golu/story-01/voice/s09_l1.wav",
+     "abs": 90.217
+    },
+    {
+     "who": "narrator",
+     "hi": "दूसरा आम भी खट्टा! तीसरा आम भी खट्टा!",
+     "start": 6.457,
+     "dur": 3.185,
+     "file": "golu/story-01/voice/s09_l2.wav",
+     "abs": 93.398
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "start": 97.982,
+   "dur": 8.194,
+   "lines": [
+    {
+     "who": "ped",
+     "hi": "गोलू, जब दिल खट्टा हो जाए, तो आम भी खट्टे हो जाते हैं।",
+     "start": 0.6,
+     "dur": 3.956,
+     "file": "golu/story-01/voice/s10_l0.wav",
+     "abs": 98.582
+    },
+    {
+     "who": "golu",
+     "hi": "मतलब... मैं अकेले खाऊँगा, तो सब खट्टा?",
+     "start": 5.006,
+     "dur": 2.388,
+     "file": "golu/story-01/voice/s10_l1.wav",
+     "abs": 102.988
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "start": 106.176,
+   "dur": 7.325,
+   "lines": [
+    {
+     "who": "narrator",
+     "hi": "गोलू ने देखा, पिंकी उदास थी, और हाथी दादा थके हुए थे।",
+     "start": 0.6,
+     "dur": 4.02,
+     "file": "golu/story-01/voice/s11_l0.wav",
+     "abs": 106.776
+    },
+    {
+     "who": "golu",
+     "hi": "ओह... मैंने गलती कर दी।",
+     "start": 5.07,
+     "dur": 1.455,
+     "file": "golu/story-01/voice/s11_l1.wav",
+     "abs": 111.246
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "start": 113.501,
+   "dur": 12.287,
+   "lines": [
+    {
+     "who": "golu",
+     "hi": "पिंकी, ये लो! हाथी दादा, आप भी लो! सॉरी, अब हम साथ में खाएँगे!",
+     "start": 0.6,
+     "dur": 4.85,
+     "file": "golu/story-01/voice/s12_l0.wav",
+     "abs": 114.101
+    },
+    {
+     "who": "narrator",
+     "hi": "पिंकी मुस्कुराई, और हाथी दादा ने प्यार से अपनी सूँड से गोलू को गले लगाया।",
+     "start": 5.9,
+     "dur": 4.786,
+     "file": "golu/story-01/voice/s12_l1.wav",
+     "abs": 119.401
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "start": 125.788,
+   "dur": 10.272,
+   "lines": [
+    {
+     "who": "narrator",
+     "hi": "तभी जादुई पेड़ जगमग चमकने लगा! और धप्प, धप्प, धप्प... मीठे आम बरसने लगे!",
+     "start": 0.6,
+     "dur": 7.272,
+     "file": "golu/story-01/voice/s13_l0.wav",
+     "abs": 126.388
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "start": 136.059,
+   "dur": 8.612,
+   "lines": [
+    {
+     "who": "pinky",
+     "hi": "वाह! कितना मीठा आम!",
+     "start": 0.6,
+     "dur": 1.536,
+     "file": "golu/story-01/voice/s14_l0.wav",
+     "abs": 136.659
+    },
+    {
+     "who": "golu",
+     "hi": "सच में! साथ में खाने का मज़ा ही अलग है!",
+     "start": 2.586,
+     "dur": 2.284,
+     "file": "golu/story-01/voice/s14_l1.wav",
+     "abs": 138.646
+    },
+    {
+     "who": "haathi",
+     "hi": "शाबाश गोलू! बाँटने से खुशी बढ़ती है।",
+     "start": 5.32,
+     "dur": 2.492,
+     "file": "golu/story-01/voice/s14_l2.wav",
+     "abs": 141.379
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "start": 144.672,
+   "dur": 15.096,
+   "lines": [
+    {
+     "who": "golu",
+     "hi": "सब मिलकर गाओ!",
+     "start": 0.6,
+     "dur": 0.938,
+     "file": "golu/story-01/voice/s15_l0.wav",
+     "abs": 145.272
+    },
+    {
+     "who": "chorus",
+     "hi": "आम मीठा... दिल भी मीठा... बाँटो तो... सब कुछ मीठा!",
+     "start": 1.988,
+     "dur": 5.185,
+     "file": "golu/story-01/voice/s15_l1.wav",
+     "abs": 146.659
+    },
+    {
+     "who": "golu",
+     "hi": "एक बार और!",
+     "start": 7.623,
+     "dur": 0.712,
+     "file": "golu/story-01/voice/s15_l2.wav",
+     "abs": 152.294
+    },
+    {
+     "who": "chorus",
+     "hi": "आम मीठा... दिल भी मीठा... बाँटो तो... सब कुछ मीठा!",
+     "start": 8.784,
+     "dur": 4.912,
+     "file": "golu/story-01/voice/s15_l3.wav",
+     "abs": 153.456
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "start": 159.768,
+   "dur": 5.975,
+   "lines": [
+    {
+     "who": "narrator",
+     "hi": "तो बच्चों, याद रखना: बाँटने से खुशी बढ़ती है!",
+     "start": 0.6,
+     "dur": 3.375,
+     "file": "golu/story-01/voice/s16_l0.wav",
+     "abs": 160.368
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "start": 165.743,
+   "dur": 7.263,
+   "lines": [
+    {
+     "who": "golu",
+     "hi": "कहानी अच्छी लगी? तो गोलू बंदर किड्स को सब्सक्राइब करो! उल्लू-लू-लू! बाय-बाय!",
+     "start": 0.6,
+     "dur": 5.263,
+     "file": "golu/story-01/voice/s17_l0.wav",
+     "abs": 166.343
+    }
+   ]
+  }
+ ],
+ "total": 178.507,
+ "intro": 4.0,
+ "outro_start": 173.007
+}

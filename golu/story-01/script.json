@@ -1,0 +1,333 @@
+{
+ "title": "Golu aur Jaadui Aam ka Ped",
+ "title_hi": "गोलू और जादुई आम का पेड़",
+ "moral": "Baantne se khushi badhti hai",
+ "chant": {
+  "hi": "आम मीठा, दिल भी मीठा, बाँटो तो सब कुछ मीठा!",
+  "roman": "Aam meetha, dil bhi meetha, baanto toh sab kuchh meetha!"
+ },
+ "voices": {
+  "narrator": {
+   "id": "06llJPvI62CjqSWOX9Gp",
+   "name": "Pari M",
+   "pitch": 0,
+   "tempo": 0.95
+  },
+  "golu": {
+   "id": "7b9mYhmnp0y2qSH1FnBL",
+   "name": "Bunty",
+   "pitch": 3,
+   "tempo": 0.92
+  },
+  "pinky": {
+   "id": "7PoJrtDD6yvTa56HTDt1",
+   "name": "Heena M",
+   "pitch": 3,
+   "tempo": 0.92
+  },
+  "haathi": {
+   "id": "iNxufoJtBP3mZOBncgAa",
+   "name": "Mr. India",
+   "pitch": -1,
+   "tempo": 0.95
+  },
+  "ped": {
+   "id": "XNJDyPyJ8r4J7de0WJwB",
+   "name": "Sudhir",
+   "pitch": -1,
+   "tempo": 0.95
+  }
+ },
+ "scenes": [
+  {
+   "id": 1,
+   "visual": "Sunny jungle, Golu swings in on a vine and lands waving at the camera.",
+   "lines": [
+    {
+     "who": "narrator",
+     "hi": "एक हरे-भरे जंगल में रहता था गोलू बंदर। छोटा सा, नटखट सा, और हमेशा खुश!",
+     "roman": "Ek hare-bhare jungle mein rehta tha Golu Bandar. Chhota sa, natkhat sa, aur hamesha khush!"
+    },
+    {
+     "who": "narrator",
+     "hi": "गोलू को आम बहुत पसंद थे। पीले-पीले, मीठे-मीठे आम!",
+     "roman": "Golu ko aam bahut pasand the. Peele-peele, meethe-meethe aam!"
+    },
+    {
+     "who": "golu",
+     "hi": "उल्लू-लू-लू! हेलो दोस्तों! मैं हूँ गोलू!",
+     "roman": "Ullu-lu-lu! Hello doston! Main hoon Golu!"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "visual": "Golu swings, slips and falls - dhapp! - under a big glowing mango tree.",
+   "lines": [
+    {
+     "who": "narrator",
+     "hi": "एक दिन गोलू झूलते-झूलते... धप्प! एक अनोखे पेड़ के नीचे गिर गया।",
+     "roman": "Ek din Golu jhoolte-jhoolte... dhapp! Ek anokhe ped ke neeche gir gaya."
+    },
+    {
+     "who": "golu",
+     "hi": "अरे! ये कौन सा पेड़ है? ये तो चमक रहा है!",
+     "roman": "Arre! Ye kaun sa ped hai? Ye toh chamak raha hai!"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "visual": "The tree opens friendly eyes and smiles; sparkles float around.",
+   "lines": [
+    {
+     "who": "ped",
+     "hi": "मैं हूँ जादुई आम का पेड़। जो प्यार से गाना गाए, उसे मिलता है मीठा आम!",
+     "roman": "Main hoon jaadui aam ka ped. Jo pyaar se gaana gaaye, use milta hai meetha aam!"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "visual": "Golu sings the chant and claps; a golden mango drops - tapak!",
+   "lines": [
+    {
+     "who": "golu",
+     "hi": "आम मीठा... दिल भी मीठा... बाँटो तो... सब कुछ मीठा!",
+     "roman": "Aam meetha, dil bhi meetha, baanto toh sab kuchh meetha!",
+     "tempo": 0.9
+    },
+    {
+     "who": "narrator",
+     "hi": "टपक! एक सुनहरा आम नीचे आ गया।",
+     "roman": "Tapak! Ek sunehra aam neeche aa gaya."
+    },
+    {
+     "who": "golu",
+     "hi": "वाह! जादू! सच में जादू!",
+     "roman": "Waah! Jaadu! Sach mein jaadu!"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "visual": "Golu takes a big bite, eyes close with joy, then a sneaky grin.",
+   "lines": [
+    {
+     "who": "golu",
+     "hi": "म्म्म! कितना मीठा! अब मैं सारे आम अकेले खाऊँगा। किसी को नहीं बताऊँगा!",
+     "roman": "Mmm! Kitna meetha! Ab main saare aam akele khaunga. Kisi ko nahi bataunga!"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "visual": "Golu piles up a big heap of mangoes and sits on top of it.",
+   "lines": [
+    {
+     "who": "narrator",
+     "hi": "गोलू ने आम तोड़ने शुरू किए। एक, दो, तीन... ढेर लगा दिया!",
+     "roman": "Golu ne aam todne shuru kiye. Ek, do, teen... dher laga diya!"
+    },
+    {
+     "who": "golu",
+     "hi": "ये भी मेरा, वो भी मेरा... सारे आम मेरे!",
+     "roman": "Ye bhi mera, wo bhi mera... saare aam mere!"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "visual": "Little sister Pinky arrives, asks for a mango; Golu hugs the heap and says no; Pinky looks sad.",
+   "lines": [
+    {
+     "who": "pinky",
+     "hi": "भैया! मुझे भी एक आम दो ना, बहुत भूख लगी है।",
+     "roman": "Bhaiya! Mujhe bhi ek aam do na, bahut bhookh lagi hai."
+    },
+    {
+     "who": "golu",
+     "hi": "नहीं पिंकी! ये सब मेरे आम हैं!",
+     "roman": "Nahi Pinky! Ye sab mere aam hain!"
+    },
+    {
+     "who": "narrator",
+     "hi": "बेचारी पिंकी की आँखों में आँसू आ गए।",
+     "roman": "Bechaari Pinky ki aankhon mein aansoo aa gaye."
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "visual": "Haathi Dada, the kind elephant, walks in slowly in the hot sun.",
+   "lines": [
+    {
+     "who": "haathi",
+     "hi": "गोलू बेटा, आज बहुत गर्मी है। एक आम मिल जाए तो प्यास बुझ जाए।",
+     "roman": "Golu beta, aaj bahut garmi hai. Ek aam mil jaaye toh pyaas bujh jaaye."
+    },
+    {
+     "who": "golu",
+     "hi": "नहीं दादा! सब मेरे हैं!",
+     "roman": "Nahi Dada! Sab mere hain!"
+    },
+    {
+     "who": "narrator",
+     "hi": "हाथी दादा धीरे-धीरे पेड़ की छाँव में बैठ गए।",
+     "roman": "Haathi Dada dheere-dheere ped ki chhaanv mein baith gaye."
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "visual": "Golu bites a new mango - it is sour! Funny scrunched face, shakes head.",
+   "lines": [
+    {
+     "who": "narrator",
+     "hi": "गोलू ने नया आम खाया... और...",
+     "roman": "Golu ne naya aam khaaya... aur..."
+    },
+    {
+     "who": "golu",
+     "hi": "थू! छी! ये तो खट्टा है! बहुत खट्टा!",
+     "roman": "Thoo! Chhee! Ye toh khatta hai! Bahut khatta!"
+    },
+    {
+     "who": "narrator",
+     "hi": "दूसरा आम भी खट्टा! तीसरा आम भी खट्टा!",
+     "roman": "Doosra aam bhi khatta! Teesra aam bhi khatta!"
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "visual": "The tree's glow fades; leaves droop; mangoes turn green.",
+   "lines": [
+    {
+     "who": "ped",
+     "hi": "गोलू, जब दिल खट्टा हो जाए, तो आम भी खट्टे हो जाते हैं।",
+     "roman": "Golu, jab dil khatta ho jaaye, toh aam bhi khatte ho jaate hain."
+    },
+    {
+     "who": "golu",
+     "hi": "मतलब... मैं अकेले खाऊँगा, तो सब खट्टा?",
+     "roman": "Matlab... main akele khaunga, toh sab khatta?"
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "visual": "Golu looks at Pinky crying and Haathi Dada tired; Golu feels sorry.",
+   "lines": [
+    {
+     "who": "narrator",
+     "hi": "गोलू ने देखा, पिंकी उदास थी, और हाथी दादा थके हुए थे।",
+     "roman": "Golu ne dekha, Pinky udaas thi, aur Haathi Dada thake hue the."
+    },
+    {
+     "who": "golu",
+     "hi": "ओह... मैंने गलती कर दी।",
+     "roman": "Oh... maine galti kar di."
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "visual": "Golu runs over and gives mangoes to Pinky and Haathi Dada.",
+   "lines": [
+    {
+     "who": "golu",
+     "hi": "पिंकी, ये लो! हाथी दादा, आप भी लो! सॉरी, अब हम साथ में खाएँगे!",
+     "roman": "Pinky, ye lo! Haathi Dada, aap bhi lo! Sorry, ab hum saath mein khayenge!"
+    },
+    {
+     "who": "narrator",
+     "hi": "पिंकी मुस्कुराई, और हाथी दादा ने प्यार से अपनी सूँड से गोलू को गले लगाया।",
+     "roman": "Pinky muskuraayi, aur Haathi Dada ne pyaar se apni soond se Golu ko gale lagaaya."
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "visual": "The tree glows brightly and mangoes rain down - dhapp, dhapp, dhapp!",
+   "lines": [
+    {
+     "who": "narrator",
+     "hi": "तभी जादुई पेड़ जगमग चमकने लगा! और धप्प, धप्प, धप्प... मीठे आम बरसने लगे!",
+     "roman": "Tabhi jaadui ped jagmag chamakne laga! Aur dhapp, dhapp, dhapp... meethe aam barasne lage!"
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "visual": "Everyone eats happily; Pinky jumps; Haathi Dada smiles and lifts a mango with his trunk.",
+   "lines": [
+    {
+     "who": "pinky",
+     "hi": "वाह! कितना मीठा आम!",
+     "roman": "Waah! Kitna meetha aam!"
+    },
+    {
+     "who": "golu",
+     "hi": "सच में! साथ में खाने का मज़ा ही अलग है!",
+     "roman": "Sach mein! Saath mein khaane ka maza hi alag hai!"
+    },
+    {
+     "who": "haathi",
+     "hi": "शाबाश गोलू! बाँटने से खुशी बढ़ती है।",
+     "roman": "Shabaash Golu! Baantne se khushi badhti hai."
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "visual": "All three dance and sing the chant together under the glowing tree.",
+   "lines": [
+    {
+     "who": "golu",
+     "hi": "सब मिलकर गाओ!",
+     "roman": "Sab milkar gaao!"
+    },
+    {
+     "who": "chorus",
+     "hi": "आम मीठा... दिल भी मीठा... बाँटो तो... सब कुछ मीठा!",
+     "roman": "Aam meetha, dil bhi meetha, baanto toh sab kuchh meetha!",
+     "tempo": 0.9
+    },
+    {
+     "who": "golu",
+     "hi": "एक बार और!",
+     "roman": "Ek baar aur!"
+    },
+    {
+     "who": "chorus",
+     "hi": "आम मीठा... दिल भी मीठा... बाँटो तो... सब कुछ मीठा!",
+     "roman": "Aam meetha, dil bhi meetha, baanto toh sab kuchh meetha!",
+     "tempo": 0.9
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "visual": "Sunset glow, the three friends sit together; narrator gives the moral.",
+   "lines": [
+    {
+     "who": "narrator",
+     "hi": "तो बच्चों, याद रखना: बाँटने से खुशी बढ़ती है!",
+     "roman": "Toh bachchon, yaad rakhna: baantne se khushi badhti hai!"
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "visual": "Golu close-up waving at the camera.",
+   "lines": [
+    {
+     "who": "golu",
+     "hi": "कहानी अच्छी लगी? तो गोलू बंदर किड्स को सब्सक्राइब करो! उल्लू-लू-लू! बाय-बाय!",
+     "roman": "Kahaani achchhi lagi? Toh Golu Bandar Kids ko subscribe karo! Ullu-lu-lu! Bye-bye!"
+    }
+   ]
+  }
+ ]
+}
