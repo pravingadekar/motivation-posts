@@ -1,0 +1,14 @@
+{
+ "date": "2026-11-14",
+ "topic": "5. Chup-chap mehnat karo, success shor machayegi",
+ "hook": "Koi notice nahi karta? Ye suno",
+ "emotion": "warm, calm and reassuring, then quietly confident, like a heart-to-heart talk",
+ "shots": [
+  {"dialogue": "Agar tum *chupchaap* mehnat kar rahe ho aur koi notice nahi karta, ye suno.",
+   "dialogue_hi": "अगर तुम चुपचाप मेहनत कर रहे हो और कोई नोटिस नहीं करता, ये सुनो।"},
+  {"dialogue": "Jad zameen ke *andar* badhti hai, tabhi ped toofan mein bhi khada rehta hai.",
+   "dialogue_hi": "जड़ ज़मीन के अंदर बढ़ती है, तभी पेड़ तूफ़ान में भी खड़ा रहता है।"},
+  {"dialogue": "Result khud *bolega*. Ye video us dost ko bhejo jo chupchaap lad raha hai.",
+   "dialogue_hi": "रिज़ल्ट खुद बोलेगा। ये वीडियो उस दोस्त को भेजो जो चुपचाप लड़ रहा है।"}
+ ]
+}
