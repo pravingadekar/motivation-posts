@@ -6,15 +6,17 @@
  "shots": [
   {
    "dialogue": "Agar raat bhar ek hi *baat* sochte rehte ho, to ye *teen* kadam yaad rakhna.",
-   "dialogue_hi": "अगर रात भर एक ही बात सोचते रहते हो, तो ये तीन कदम याद रखना।"
+   "dialogue_hi": "अगर रात भर एक ही *बात* सोचते रहते हो, तो ये *तीन* कदम याद रखना।"
   },
   {
    "dialogue": "Pehla, jo soch rahe ho use *kaagaz* pe likho. Doosra, abhi bas ek chhota *kaam* karo.",
-   "dialogue_hi": "पहला, जो सोच रहे हो उसे कागज़ पे लिखो। दूसरा, अभी बस एक छोटा काम करो।"
+   "dialogue_hi": "पहला, जो सोच रहे हो उसे *कागज़* पे लिखो। दूसरा, अभी बस एक छोटा *काम* करो।"
   },
   {
    "dialogue": "Teesra, khud se *pyaar* se baat karo. Ye video us dost ko bhejo jo bahut sochta hai.",
-   "dialogue_hi": "तीसरा, खुद से प्यार से बात करो। ये वीडियो उस दोस्त को भेजो जो बहुत सोचता है।"
+   "dialogue_hi": "तीसरा, खुद से *प्यार* से बात करो। ये वीडियो उस दोस्त को भेजो जो बहुत सोचता है।"
   }
- ]
+ ],
+ "caption_lang": "hi",
+ "hook_hi": "ओवरथिंकिंग से बाहर आने के तीन कदम"
 }
