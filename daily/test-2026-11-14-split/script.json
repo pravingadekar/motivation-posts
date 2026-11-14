@@ -1,0 +1,127 @@
+{
+ "date": "2026-11-14",
+ "topic": "TEST split-screen format: 6. Overthinking band karo - action lo (teen kadam)",
+ "hook": "Overthinking se bahar aane ke teen kadam",
+ "emotion": "soft, warm and friendly, like talking to a close friend",
+ "poster": {
+  "title_small": "Overthinking se bahar",
+  "title_big": "TEEN KADAM",
+  "steps": [
+   {
+    "label": "KADAM 01",
+    "title": "Likh do",
+    "sub": "Dimaag ki baat kaagaz pe utaar do.",
+    "on": [
+     2,
+     0.0
+    ]
+   },
+   {
+    "label": "KADAM 02",
+    "title": "Ek chhota kaam",
+    "sub": "Abhi, isi pal. Bas ek.",
+    "on": [
+     2,
+     0.55
+    ]
+   },
+   {
+    "label": "KADAM 03",
+    "title": "Khud se narmi",
+    "sub": "Apne aap se dost jaisi baat karo.",
+    "on": [
+     3,
+     0.0
+    ]
+   }
+  ]
+ },
+ "shots": [
+  {
+   "dialogue": "Agar raat bhar ek hi *baat* sochte rehte ho, to ye *teen* kadam yaad rakhna.",
+   "dialogue_hi": "अगर रात भर एक ही बात सोचते रहते हो, तो ये तीन कदम याद रखना।",
+   "broll": [
+    {
+     "at": 0.18,
+     "to": 0.62,
+     "card": {
+      "type": "clock",
+      "label": "Raat 2 baje",
+      "time": "2:07 AM",
+      "thoughts": [
+       "Kya hoga?",
+       "Galat to nahi kiya?",
+       "Log kya sochenge?"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "dialogue": "Pehla, jo soch rahe ho use *kaagaz* pe likho. Doosra, abhi bas ek chhota *kaam* karo.",
+   "dialogue_hi": "पहला, जो सोच रहे हो उसे कागज़ पे लिखो। दूसरा, अभी बस एक छोटा काम करो।",
+   "broll": [
+    {
+     "at": 0.06,
+     "to": 0.5,
+     "card": {
+      "type": "note",
+      "label": "Kadam 01 · Likh do",
+      "title": "Mere dimaag me kya hai",
+      "lines": [
+       "Kal ki meeting ka darr",
+       "Usne aisa kyun bola?",
+       "Sab theek hoga ya nahi?"
+      ]
+     }
+    },
+    {
+     "at": 0.62,
+     "to": 1.0,
+     "card": {
+      "type": "checklist",
+      "label": "Kadam 02 · Ek kaam",
+      "title": "Abhi ka bas ek kaam",
+      "items": [
+       "Ek glass paani piyo",
+       "Paanch minute walk",
+       "Ek message ka reply"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "dialogue": "Teesra, khud se *pyaar* se baat karo. Ye video us dost ko bhejo jo bahut sochta hai.",
+   "dialogue_hi": "तीसरा, खुद से प्यार से बात करो। ये वीडियो उस दोस्त को भेजो जो बहुत सोचता है।",
+   "broll": [
+    {
+     "at": 0.0,
+     "to": 0.45,
+     "card": {
+      "type": "chat",
+      "label": "Kadam 03 · Narmi",
+      "title": "Khud se baat",
+      "messages": [
+       {
+        "from": "me",
+        "text": "Aaj kuch theek nahi hua"
+       },
+       {
+        "from": "her",
+        "text": "Koi baat nahi. Tum koshish kar rahe ho, ye kaafi hai."
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "cta": {
+  "text": "Is dost ko bhejo",
+  "on": [
+   3,
+   0.5
+  ]
+ }
+}
