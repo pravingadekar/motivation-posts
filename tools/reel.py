@@ -80,7 +80,19 @@ def cmd_prompts(day):
                           emotion=s.get("emotion", "softly and warmly, like talking to a close friend"), line=line)
         with open(os.path.join(day, "prompts", f"shot{i}.txt"), "w", encoding="utf-8") as f:
             f.write(p + "\n")
-    print(f"wrote {len(s['shots'])} prompts")
+    # One-line request for the Flow agent chat (Enter submits there, so no newlines). The start frame is the
+    # image attached in the chat, not <IMAGE_REF_0>.
+    parts = []
+    for i in range(1, len(s["shots"]) + 1):
+        with open(os.path.join(day, "prompts", f"shot{i}.txt"), encoding="utf-8") as f:
+            p = f.read().replace("<IMAGE_REF_0>", "the attached image")
+        parts.append(f"VIDEO {i} PROMPT: " + " ".join(p.split()))
+    msg = (f"Please generate {len(parts)} separate videos, one per prompt below. For each: Veo 3.1 Lite, 9:16 "
+           "vertical, 8 seconds, with audio, use the attached image as the START FRAME (image-to-video), and use "
+           "the prompt text exactly as written, do not rewrite or translate the Hindi line. " + " ".join(parts))
+    with open(os.path.join(day, "prompts", "flow_message.txt"), "w", encoding="utf-8") as f:
+        f.write(msg + "\n")
+    print(f"wrote {len(s['shots'])} prompts + flow_message.txt")
 
 
 def cmd_clips(day):
@@ -237,19 +249,24 @@ def cmd_build(day):
 
         # overlays: handle (whole reel), hook (first 3 s), caption pieces timed across each shot's speech
         overlays = []   # no @handle watermark (user asked to remove it)
+        # Default since 14 Nov 2026 (user): Hindi Devanagari captions at the bottom, under the face. Set
+        # "caption_lang": "roman" in script.json for the old big Hinglish captions.
+        hindi = s.get("caption_lang", "hi") == "hi" and all(sh.get("dialogue_hi") for sh in s["shots"])
+        if hindi:
+            import hindi_text
         hp = os.path.join(tmp, "hook.png")
-        hook_png(s["hook"], hp)
+        (hindi_text.hook_png if hindi else hook_png)(s.get("hook_hi") if hindi and s.get("hook_hi") else s["hook"], hp)
         overlays.append((hp, 0, 3.0))
         k = 0
         for shot, t in zip(s["shots"], timings):
-            pieces = chunks(shot["dialogue"])
+            pieces = chunks(shot["dialogue_hi"] if hindi else shot["dialogue"])
             a, b = t["speech"]
             weights = [sum(len(w) for w, _ in p) + 2 for p in pieces]
             cur = a
             for p, wgt in zip(pieces, weights):
                 d = (b - a) * wgt / sum(weights)
                 path = os.path.join(tmp, f"cap{k}.png")
-                caption_png(p, path)
+                (hindi_text.caption_png if hindi else caption_png)(p, path)
                 overlays.append((path, cur, cur + d))
                 cur += d
                 k += 1

@@ -33,9 +33,11 @@ Work autonomously; nobody will reply. Only touch this repository.
    - exactly **3 shots** (one per camera angle); each `dialogue` is one natural spoken Hinglish line in Roman script,
      **12-15 words** (8-second clips), simple everyday Hindi (Indian audience, 18-35). Mark 1-2 key words per shot
      with `*stars*`. No double quotes, no emojis, no numerals (write numbers as words).
-   - ALSO give each shot `dialogue_hi`: the exact same line in Hindi Devanagari script (no stars). This is what the
-     host speaks — Veo pronounces Hindi naturally from Devanagari, while Roman Hinglish sounds AI-ish (user, 5 Nov).
-     The Roman `dialogue` is still used for the on-screen captions.
+   - ALSO give each shot `dialogue_hi`: the exact same line in Hindi Devanagari script, with the same 1-2 key
+     words marked with `*stars*` (stars are removed from the speech). This is what the host speaks — Veo pronounces
+     Hindi naturally from Devanagari, while Roman Hinglish sounds AI-ish (user, 5 Nov). Since 14 Nov it is also the
+     on-screen caption: Hindi captions at the bottom of the frame, below the face (user's request).
+   - ALSO give `hook_hi`: the hook in Devanagari (shown on screen in a yellow box above the head).
    - Make it SHAREABLE: a relatable, specific situation people send to a friend/sibling/partner ("Ye un logon ke
      liye jo sabka khayal rakhte hain, par apna nahi"), one quotable line, no generic filler.
    - Shot 1 = strong hook that names the viewer's pain ("Agar log tumhe kamzor samajhte hain..."),
@@ -49,7 +51,7 @@ Work autonomously; nobody will reply. Only touch this repository.
      `python tools/reel.py still daily/D` (slow zoom on character/host.png, captions and music, no voice),
      skip step 6's voice checks, and say in the final report that the fallback was used.
 6. `python tools/reel.py build daily/D`. Open `daily/D/check/*.jpg` and look at each:
-   same woman as character/host.png, podcast studio, no garbled on-screen text from the model, captions readable.
+   same woman as character/host.png, podcast studio, no garbled on-screen text from the model, Hindi captions readable with matras joined correctly and sitting below the face, not on it.
    Also check the build output: each shot's speech should be at least 4 s. If a shot is wrong (different person,
    text in frame, cut-off speech), delete `daily/D/clips/shotN.mp4`, re-run `clips` and `build` (within budget).
    If it still fails, do not post; explain in the final report.
