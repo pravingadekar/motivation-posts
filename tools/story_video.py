@@ -1,6 +1,6 @@
 """Long-form 16:9 story video (YouTube): narrated Hindi chapters over illustrated scenes.
 
-    python tools/story_video.py voice CH_DIR    # free Edge neural TTS per segment -> CH_DIR/voice/NN.mp3
+    python tools/story_video.py voice CH_DIR    # Sarvam (voice "sarvam:ratan", default) or free Edge TTS -> CH_DIR/voice/NN.mp3
     python tools/story_video.py build CH_DIR    # needs CH_DIR/img/NN.png for each scene segment -> CH_DIR/chapter.mp4
     python tools/story_video.py join OUT.mp4 CH_DIR [CH_DIR ...]   # chapters -> full video
 
@@ -49,9 +49,33 @@ def duration(path):
     return int(h) * 3600 + int(m) * 60 + float(s)
 
 
+def sarvam_key():
+    k = os.environ.get("SARVAM_API_KEY")
+    if not k and os.name == "nt":  # set as a Windows user variable but the shell started earlier
+        import winreg
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, "Environment") as r:
+            k = winreg.QueryValueEx(r, "SARVAM_API_KEY")[0]
+    return k
+
+
+def sarvam_tts(text, mp3, speaker="ratan", model="bulbul:v3", pace=0.9):
+    import base64
+    import urllib.request
+    body = json.dumps({"text": text, "language_code": "hi-IN", "speaker": speaker, "model": model,
+                       "pace": pace, "speech_sample_rate": 44100, "output_audio_codec": "mp3"}).encode()
+    req = urllib.request.Request("https://api.sarvam.ai/text-to-speech", body,
+                                 {"api-subscription-key": sarvam_key(), "Content-Type": "application/json"})
+    r = json.load(urllib.request.urlopen(req, timeout=120))
+    with open(mp3, "wb") as f:
+        f.write(base64.b64decode("".join(r["audios"])))
+
+
 def voice(ch):
+    """script.json "voice": "sarvam:<speaker>" (Sarvam Bulbul v3, needs SARVAM_API_KEY, ~Rs 3 per 1000 chars)
+    or an Edge voice name (free)."""
     import edge_tts
     s = load(ch)
+    v = s.get("voice", "sarvam:ratan")
     out = os.path.join(ch, "voice")
     os.makedirs(out, exist_ok=True)
 
@@ -61,15 +85,26 @@ def voice(ch):
                 continue
             mp3 = os.path.join(out, f"{i:02d}.mp3")
             if not os.path.exists(mp3):
-                await edge_tts.Communicate(seg["text"], s.get("voice", "hi-IN-MadhurNeural"),
-                                           rate=s.get("rate", "-6%")).save(mp3)
+                if v.startswith("sarvam:"):
+                    sarvam_tts(seg["text"], mp3, v.split(":", 1)[1], pace=float(s.get("pace", 0.9)))
+                else:
+                    await edge_tts.Communicate(seg["text"], v, rate=s.get("rate", "-6%")).save(mp3)
             print(f"{i:02d}: {duration(mp3):.1f}s")
     asyncio.run(go())
 
 
+def neutral(im, amount=0.6):
+    """Pull the colour cast (ChatGPT's yellow/golden tint) toward neutral grey; user asked for no gold haze."""
+    from PIL import ImageStat
+    r, g, b = ImageStat.Stat(im).mean
+    m = (r + g + b) / 3
+    gains = [1 + amount * (m / c - 1) for c in (r, g, b)]
+    return im.point([min(255, round(i * gains[k])) for k in range(3) for i in range(256)])
+
+
 def fit(img_path):
     if os.path.exists(img_path):
-        im = Image.open(img_path).convert("RGB")
+        im = neutral(Image.open(img_path).convert("RGB"))
         sc = max(W / im.width, H / im.height)
         im = im.resize((round(im.width * sc), round(im.height * sc)), Image.LANCZOS)
         l, t = (im.width - W) // 2, (im.height - H) // 2

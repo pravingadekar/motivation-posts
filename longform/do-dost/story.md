@@ -9,6 +9,9 @@ Theme: small daily habits, not money. No money promises, no real people, no reli
 - **दादाजी (Kunal's grandfather):** white dhoti-kurta, thick round glasses, white moustache, an old leather diary.
 - Place: a small Indian town (no real name): narrow lane, a sugar mill, an old railway station.
 
+## Voice
+Sarvam Bulbul v3, speaker **ratan**, pace 0.9 (user picked 14 Nov 2026). In script.json: "voice": "sarvam:ratan", "pace": 0.9. Chapter 1 was published with Edge Brian before this.
+
 ## Image style (add to every prompt)
 Warm 2D digital illustration, soft painterly cartoon style like an Indian storybook, cinematic lighting, rich warm colours, 16:9 wide frame, no text, no letters, no logos.
 
