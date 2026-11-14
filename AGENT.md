@@ -1,6 +1,7 @@
 # Daily agent: "Motivational guru" AI podcast reel (Hindi)
 
-One reel per day: the same fictional AI woman podcaster (character/host.png) speaks a ~25-second Hinglish
+One reel per day: the same fictional AI woman host (character/host_natural_v2.png since 14 Nov 2026: natural look,
+one close-up, soft "voice note to a friend" voice) speaks a ~25-second Hinglish
 motivation talk with lip-synced voice (Gemini Omni), with bold captions. Posted once a day to YouTube Shorts,
 Facebook Reels and Instagram Reels through Metricool.
 
@@ -32,6 +33,9 @@ Work autonomously; nobody will reply. Only touch this repository.
    - exactly **3 shots** (one per camera angle); each `dialogue` is one natural spoken Hinglish line in Roman script,
      **12-15 words** (8-second clips), simple everyday Hindi (Indian audience, 18-35). Mark 1-2 key words per shot
      with `*stars*`. No double quotes, no emojis, no numerals (write numbers as words).
+   - ALSO give each shot `dialogue_hi`: the exact same line in Hindi Devanagari script (no stars). This is what the
+     host speaks — Veo pronounces Hindi naturally from Devanagari, while Roman Hinglish sounds AI-ish (user, 5 Nov).
+     The Roman `dialogue` is still used for the on-screen captions.
    - Make it SHAREABLE: a relatable, specific situation people send to a friend/sibling/partner ("Ye un logon ke
      liye jo sabka khayal rakhte hain, par apna nahi"), one quotable line, no generic filler.
    - Shot 1 = strong hook that names the viewer's pain ("Agar log tumhe kamzor samajhte hain..."),

@@ -1,3 +1,8 @@
+> **Paused from 14 Nov 2026.** The user switched the reels to a natural "girl next door" host
+> (character/host_natural_v2.png: cream floral kurta, side rope braids, pearl hoops, warm home background, one close-up
+> angle). No weekly outfit images are made any more. See character/natural_look_draft.md. The table below is kept only
+> for reference.
+
 # Weekly wardrobe for the host (same woman, same curvy figure, same face/hair)
 
 Rule: the outfit stays the SAME for a whole ISO week (Mon-Sun) so all 7 reels match, and changes every week.

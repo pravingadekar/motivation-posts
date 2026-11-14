@@ -9,7 +9,8 @@ script.json:
   "date": "YYYY-MM-DD", "topic": "...",
   "hook": "short on-screen hook, Hinglish, max 7 words",
   "emotion": "calm and intense" (optional),
-  "shots": [ {"dialogue": "Hinglish line, *key* words in stars", "camera": "optional camera note"}, ... ]
+  "shots": [ {"dialogue": "Hinglish line, *key* words in stars", "dialogue_hi": "same line in Devanagari (spoken)",
+              "camera": "optional camera note"}, ... ]
 }
 Dialogue is spoken exactly (stars removed); the same text with stars becomes the burned-in captions.
 """
@@ -33,25 +34,24 @@ except Exception:  # noqa: BLE001
     FFMPEG = "ffmpeg"
 
 W, H, FPS = 1080, 1920, 30
-HOST = os.path.join(ROOT, "character", "host.png")
+HOST = os.path.join(ROOT, "character", "host_natural_v2.png")  # natural look, approved 14 Nov 2026
 HANDLE = "@ai__wala_motivational_guru"
 MAX_WORDS = 22          # per 10-second clip
-MUSIC_VOL = 0.13
+MUSIC_VOL = 0.17        # soft background music under the voice (user asked for a bit more, 5 Nov)
 RES = "720p"
-# one camera angle per shot; reference images character/host.png, host_angle2.png, host_angle3.png match these
+# Natural "girl next door" look (user, 14 Nov 2026): ONE locked close-up for all 3 shots, start frame
+# character/host_natural_v2.png, so the reel feels like one phone-recorded take.
 CAMERAS = [
-    "ANGLE 1 (front): medium close-up from the front at eye level, she looks straight into the camera. Very slow push-in.",
-    "ANGLE 2 (close side): tighter close-up from a three-quarter side angle on her left, she speaks into the mic and turns to the camera for the key words. Locked-off camera.",
-    "ANGLE 3 (wide side): medium-wide shot from her right side showing the desk, laptop and coffee mug, she gestures gently with one hand while talking, then looks into the camera at the end. Very slow push-in.",
+    "locked close-up, same framing as the start frame, very slight natural handheld feel. No cuts, no zoom.",
 ]
-ANGLE_REFS = ["host.png", "host_angle2.png", "host_angle3.png"]
-PROMPT = """Vertical 9:16 photorealistic podcast video. The young Indian woman from <IMAGE_REF_0> (exactly the same face, hairstyle, outfit and cozy podcast studio as in the reference) sits at the desk and speaks into the black studio microphone on a boom arm in front of her.
+PROMPT = """Vertical 9:16 photorealistic video that looks like a real phone-recorded Hindi talk reel. The young Indian woman from <IMAGE_REF_0> (exactly the same face, hairstyle, kurta, earrings and cozy home background) sits close to the camera and talks to the viewer, with the black foam microphone at the bottom-left.
 Camera: {camera}
 She speaks in Hindi, {emotion}, with clear natural lip movement matching every word: "{line}"
-Voice: young Indian woman in her mid-twenties, warm, confident and soulful, medium pitch, clear Hindi with a natural Indian accent, steady motivational pace with small pauses. The same voice in every clip.
-Audio: only her voice and a very faint room tone. No music, no sound effects.
-Look: bright, airy, high-key podcast studio full of soft daylight (white walls, big window with sheer curtains, plants, ring light), fresh and cheerful, natural skin texture, realistic hands. Never dark or moody.
-She finishes the whole line, then holds a calm confident look for about half a second.
+Voice: her own natural speaking voice, a young North Indian woman in her early twenties, casual everyday Hindi like recording a voice note for her best friend on her phone. Soft, slightly slow, a gentle smile in her voice, small natural pauses and a light breath between phrases. Not an announcer, not a speech, not dramatic, not sing-song, not robotic. Same voice in every clip.
+Acting: calm, kind eye contact, normal blinking, small natural head nods, minimal hand movement, no exaggerated mouth or eyebrow movement.
+Audio: only her voice and a very faint quiet-room tone. No music, no sound effects.
+Look: keep the soft warm indoor light, muted natural colours and real skin texture of the start frame.
+She finishes the whole line, then holds a soft smile for about half a second.
 IMPORTANT: absolutely no captions, subtitles or on-screen text of any kind, no logos, no writing anywhere. Clean video frame only."""
 
 
@@ -68,14 +68,16 @@ def cmd_prompts(day):
     s = load(day)
     os.makedirs(os.path.join(day, "prompts"), exist_ok=True)
     for i, shot in enumerate(s["shots"], start=1):
-        line = spoken(shot["dialogue"])
+        # Veo pronounces Hindi far more naturally from Devanagari than from Roman Hinglish,
+        # so speak "dialogue_hi" when it is given; the Roman "dialogue" stays for the captions.
+        line = spoken(shot.get("dialogue_hi") or shot["dialogue"])
         n = len(line.split())
         if n > MAX_WORDS:
             sys.exit(f"shot{i}: {n} words, max {MAX_WORDS}; shorten the line")
         if '"' in line:
             sys.exit(f"shot{i}: no double quotes inside dialogue")
         p = PROMPT.format(camera=shot.get("camera") or CAMERAS[(i - 1) % len(CAMERAS)],
-                          emotion=s.get("emotion", "calm, warm and intense, like a heart-to-heart talk"), line=line)
+                          emotion=s.get("emotion", "softly and warmly, like talking to a close friend"), line=line)
         with open(os.path.join(day, "prompts", f"shot{i}.txt"), "w", encoding="utf-8") as f:
             f.write(p + "\n")
     print(f"wrote {len(s['shots'])} prompts")
