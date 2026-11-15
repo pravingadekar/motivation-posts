@@ -38,6 +38,7 @@ Work autonomously; nobody will reply. Only touch this repository.
      Hindi naturally from Devanagari, while Roman Hinglish sounds AI-ish (user, 5 Nov). Since 14 Nov it is also the
      on-screen caption: Hindi captions at the bottom of the frame, below the face (user's request).
    - ALSO give `hook_hi`: the hook in Devanagari (shown on screen in a yellow box above the head).
+   - ALSO give `edit`: the on-screen copy for the edited version (see step 6b).
    - Make it SHAREABLE: a relatable, specific situation people send to a friend/sibling/partner ("Ye un logon ke
      liye jo sabka khayal rakhte hain, par apna nahi"), one quotable line, no generic filler.
    - Shot 1 = strong hook that names the viewer's pain ("Agar log tumhe kamzor samajhte hain..."),
@@ -55,6 +56,20 @@ Work autonomously; nobody will reply. Only touch this repository.
    Also check the build output: each shot's speech should be at least 4 s. If a shot is wrong (different person,
    text in frame, cut-off speech), delete `daily/D/clips/shotN.mp4`, re-run `clips` and `build` (within budget).
    If it still fails, do not post; explain in the final report.
+6b. Edited version (user, 15 Nov 2026: "daily mein lagao"): `python tools/edit_hf.py daily/D` (about 5 min:
+   faster-whisper word times, HyperFrames render). It replaces daily/D/reel.mp4 with the edited reel and keeps the
+   plain build as reel_basic.mp4. Look at daily/D/check/hf_*.jpg: hook card readable on the first frame, captions and
+   cards below the face (never on it), no overlapping text, the last frame not blurred. If the command fails or the
+   frames look wrong, copy reel_basic.mp4 back over reel.mp4 (if it exists), post the plain build and say so in the report.
+   The on-screen copy comes from script.json `"edit"` (write it in step 4):
+   - `hook`: a relatable question in Devanagari, max 8 words, 1-2 `*key*` words ("रात 2 बजे भी *दिमाग़* बंद नहीं होता?").
+   - `hook_sub`: one short promise line ("ये 3 कदम आज ही आज़माओ 👇").
+   - `steps` (optional, 0-3): cards that pop when a word is spoken: `{"text": max 5 words, "emoji": one emoji,
+     "word": a Devanagari word from dialogue_hi where the card appears}`; numbered "कदम n/N".
+   - `cta`: ["<who to send it to, max 6 words>", "💌"], `cta_sub`: short share push, `cta_word`: the word in shot 3
+     where the share card appears (usually "भेजो").
+   - `follow`: an easy comment question with a one-word answer ("कमेंट करो: आज कौन सा कदम? 1, 2 या 3 👇").
+   No on-screen AI label (the user asked to remove it); the caption line and the platform AI flags stay.
 7. Write `daily/D/captions.md`:
    - `YT title:` max 90 characters, Hinglish, emotional, ends with `#shorts`.
    - `Caption:` 2-3 short lines (Hinglish, may use a couple of emojis), then the line

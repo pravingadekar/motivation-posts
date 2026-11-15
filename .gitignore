@@ -6,3 +6,4 @@ checkpoints/
 *.safetensors
 *.pth
 *.pth.tar
+daily/*/hf/
