@@ -1,0 +1,34 @@
+{
+ "date": "2026-11-16",
+ "topic": "7. Discipline vs motivation - roz thoda, har roz",
+ "hook": "Har Monday naya plan, phir chhoot jaata?",
+ "emotion": "soft, warm and friendly, like talking to a close friend",
+ "shots": [
+  {
+   "dialogue": "Har *Monday* naya plan banate ho, aur *Wednesday* tak sab chhoot jaata hai na?",
+   "dialogue_hi": "हर *मंडे* नया प्लान बनाते हो, और *वेडनेसडे* तक सब छूट जाता है ना?"
+  },
+  {
+   "dialogue": "Main samajhti hoon, *mann* nahi karta. Bas do minute se shuru karo, *roz*, bina soche.",
+   "dialogue_hi": "मैं समझती हूँ, *मन* नहीं करता। बस दो मिनट से शुरू करो, *रोज़*, बिना सोचे।"
+  },
+  {
+   "dialogue": "*Aadat* hi asli taakat hai. Ye us dost ko *bhejo* jo har Monday shuru karta hai.",
+   "dialogue_hi": "*आदत* ही असली ताक़त है। ये उस दोस्त को *भेजो* जो हर मंडे शुरू करता है।"
+  }
+ ],
+ "caption_lang": "hi",
+ "hook_hi": "हर मंडे नया प्लान, फिर छूट जाता है?",
+ "edit": {
+  "hook": "हर *मंडे* नया प्लान, फिर छूट जाता है?",
+  "hook_sub": "मोटिवेशन नहीं, ये आदत काम आएगी 👇",
+  "steps": [
+   {"text": "बस 2 मिनट से शुरू", "emoji": "⏱️", "word": "दो"},
+   {"text": "हर दिन, बिना सोचे", "emoji": "📅", "word": "रोज़"}
+  ],
+  "cta": ["जो हर मंडे शुरू करता है", "💌"],
+  "cta_sub": "शेयर करो ➜ आज से साथ में शुरू करो",
+  "cta_word": "भेजो",
+  "follow": "कमेंट करो: कल से 2 मिनट? हाँ या ना 👇"
+ }
+}
