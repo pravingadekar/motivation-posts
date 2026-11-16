@@ -1,0 +1,33 @@
+{
+ "date": "2026-11-17",
+ "topic": "8. Maa-baap ka sapna - unke liye kuch bano",
+ "hook": "Papa ki thaki aankhein yaad hain?",
+ "emotion": "soft, warm and friendly, like talking to a close friend",
+ "shots": [
+  {
+   "dialogue": "Kabhi *papa* ki thaki aankhein dekhi hain, jab wo bolte hain, main theek hoon?",
+   "dialogue_hi": "कभी *पापा* की थकी आँखें देखी हैं, जब वो बोलते हैं, मैं ठीक हूँ?"
+  },
+  {
+   "dialogue": "Main samajhti hoon, *pressure* lagta hai. Par unka sapna bas itna hai, tum *khush* raho.",
+   "dialogue_hi": "मैं समझती हूँ, *प्रेशर* लगता है। पर उनका सपना बस इतना है, तुम *ख़ुश* रहो।"
+  },
+  {
+   "dialogue": "Aaj bas unhe *thank you* bolo. Ye us dost ko *bhejo* jo ghar se door hai.",
+   "dialogue_hi": "आज बस उन्हें *थैंक यू* बोलो। ये उस दोस्त को *भेजो* जो घर से दूर है।"
+  }
+ ],
+ "caption_lang": "hi",
+ "hook_hi": "पापा की थकी आँखें याद हैं?",
+ "edit": {
+  "hook": "पापा की थकी *आँखें* याद हैं?",
+  "hook_sub": "आज बस ये एक काम करो 👇",
+  "steps": [
+   {"text": "आज बोलो: थैंक यू", "emoji": "💛", "word": "बोलो"}
+  ],
+  "cta": ["जो घर से दूर है", "💌"],
+  "cta_sub": "शेयर करो ➜ आज ही घर बात करो",
+  "cta_word": "भेजो",
+  "follow": "कमेंट करो: आज थैंक यू बोला? हाँ या ना 👇"
+ }
+}
