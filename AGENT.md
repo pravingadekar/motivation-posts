@@ -22,7 +22,8 @@ Work autonomously; nobody will reply. Only touch this repository.
 ## Steps
 1. `python3 -m pip install -q --force-reinstall --ignore-installed -r requirements.txt` (the system Pillow is broken). Compute today's IST date `D` (YYYY-MM-DD).
 2. Duplicate check: if `daily/D/posted.txt` exists, or `getScheduledPosts` for brandId 7889447 (today, +05:30)
-   already shows a post for today, stop and report "already done".
+   already shows a Short/Reel post for today, stop and report "already done". Long-form YouTube videos (youtubeData.type
+   "video", e.g. the story chapters) and image/carousel posts do not count.
 3. Topic: the first entry in topics.md whose number is not in history.md (after #40, wrap around and give the
    topic a fresh angle). Read the last 3 lines of history.md (and their daily/*/script.json): never repeat a hook or
    line, and connect to the story when it fits (a running series: e.g. shot 1 can open with "Kal humne baat ki thi
