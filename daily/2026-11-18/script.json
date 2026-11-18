@@ -1,0 +1,33 @@
+{
+ "date": "2026-11-18",
+ "topic": "9. Akele chalna seekho - sab saath nahi denge",
+ "hook": "Sab saath chhod gaye? Ye suno",
+ "emotion": "soft, warm and friendly, like talking to a close friend",
+ "shots": [
+  {
+   "dialogue": "Raat ke do baje *akele* baithe socha hai, sab *saath* kyun chhod dete hain?",
+   "dialogue_hi": "रात के दो बजे *अकेले* बैठे सोचा है, सब *साथ* क्यों छोड़ देते हैं?"
+  },
+  {
+   "dialogue": "Main samajhti hoon, *dard* hota hai. Par kuch raaste *akele* hi chalne padte hain.",
+   "dialogue_hi": "मैं समझती हूँ, *दर्द* होता है। पर कुछ रास्ते *अकेले* ही चलने पड़ते हैं।"
+  },
+  {
+   "dialogue": "Aaj ek *kadam* khud ke liye lo. Ye us dost ko *bhejo* jo akela hai.",
+   "dialogue_hi": "आज एक *कदम* ख़ुद के लिए लो। ये उस दोस्त को *भेजो* जो अकेला है।"
+  }
+ ],
+ "caption_lang": "hi",
+ "hook_hi": "सब साथ छोड़ गए? ये सुनो",
+ "edit": {
+  "hook": "रात 2 बजे *अकेले* महसूस होता है?",
+  "hook_sub": "ये बात सिर्फ़ तुम्हारे लिए है 👇",
+  "steps": [
+   {"text": "एक कदम, सिर्फ़ अपने लिए", "emoji": "👣", "word": "कदम"}
+  ],
+  "cta": ["जो अकेला लड़ रहा है", "💌"],
+  "cta_sub": "शेयर करो ➜ उसे बताओ वो अकेला नहीं",
+  "cta_word": "भेजो",
+  "follow": "कमेंट करो: आज कौन सा कदम उठाओगे? 👇"
+ }
+}
