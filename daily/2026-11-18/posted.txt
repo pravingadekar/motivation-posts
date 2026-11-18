@@ -1,0 +1,4 @@
+Scheduled 2026-11-18 18:00 IST (YouTube Short + FB Reel + IG Reel)
+Metricool post id: 432646880 (brand 7889447)
+Clips: Flow, dishghule account, Veo 3.1 Lite, 30 credits, 0 retakes (20 credits left)
+Edit: HyperFrames (tools/edit_hf.py); shot3 trimmed to 7.2 s (Veo morph glitch in the last 0.5 s)
