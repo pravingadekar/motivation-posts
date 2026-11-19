@@ -42,10 +42,13 @@ Work autonomously; nobody will reply. Only touch this repository.
    - ALSO give `edit`: the on-screen copy for the edited version (see step 6b).
    - Make it SHAREABLE: a relatable, specific situation people send to a friend/sibling/partner ("Ye un logon ke
      liye jo sabka khayal rakhte hain, par apna nahi"), one quotable line, no generic filler.
-   - Shot 1 = strong hook that names the viewer's pain ("Agar log tumhe kamzor samajhte hain..."),
-     shot 2 = the turn / truth, shot 3 = payoff line + share CTA ("...Ye video us dost ko bhejo jise aaj iski
-     zaroorat hai." or "...follow karo, kal ek aur sach batungi.").
-   - Captions (step 7) end with a share line like "Ye reel us insaan ko bhejo jo haar maanne wala hai 💌".
+   - Since 19 Nov 2026 ("apnapan" style, user-approved; guide + ready scripts in apnapan_scripts.md): the host is
+     "Meera", a friend/didi talking to one person ("yaar"). Shot 1 = a concrete everyday scene in the first second
+     ("Phone mein teen sau number, par raat do baje call karne layak ek bhi nahi?"), shot 2 = a twist / new way to see
+     it, shot 3 = one tiny action doable today. Never "Main samajhti hoon"; no "ye video us dost ko bhejo" in her speech.
+     She never claims real-life events of her own; stories are told as stories.
+   - Captions (step 7) start with the script's warm caption line and end with a share line like "Ye reel us insaan ko bhejo jo haar maanne wala hai 💌".
+   - After the clips: `python tools/tighten_clips.py daily/D` before the build (cuts dead air and long pauses, 1.08x).
 5. Check `[ -n "$GEMINI_API_KEY" ] && echo SET || echo MISSING` (never print the value).
    - SET: `python tools/reel.py prompts daily/D` then `python tools/reel.py clips daily/D`.
      If one shot fails (HTTP error or no video), retry only that shot (within the budget).
