@@ -1,0 +1,33 @@
+{
+ "date": "2026-11-19",
+ "topic": "10. (apnapan test, Meera style) Phone mein teen sau number, par call karne layak koi nahi",
+ "hook": "300 contacts, phir bhi koi nahi?",
+ "emotion": "soft, warm and friendly like a close friend on a late-night call, a small knowing smile in shot 2 and 3",
+ "shots": [
+  {
+   "dialogue": "Phone mein teen sau *number*, par raat do baje call karne layak ek bhi nahi?",
+   "dialogue_hi": "फ़ोन में तीन सौ *नंबर*, पर रात दो बजे कॉल करने लायक एक भी नहीं?"
+  },
+  {
+   "dialogue": "Yaar, shayad wo bhi kisi ka *call* wait kar rahe hain. Pehla message tum bhejo.",
+   "dialogue_hi": "यार, शायद वो भी किसी का *कॉल* वेट कर रहे हैं। पहला मैसेज तुम भेजो।"
+  },
+  {
+   "dialogue": "Bas likho, *hi*, kaise ho? Jo naam abhi yaad aaya, wahi tumhara apna hai.",
+   "dialogue_hi": "बस लिखो, *हाय*, कैसे हो? जो नाम अभी याद आया, वही तुम्हारा अपना है।"
+  }
+ ],
+ "caption_lang": "hi",
+ "hook_hi": "तीन सौ कॉन्टैक्ट, फिर भी कोई नहीं?",
+ "edit": {
+  "hook": "रात दो बजे कॉल करने को *कोई* नहीं?",
+  "hook_sub": "एक छोटा सा काम, अभी 👇",
+  "steps": [
+   {"text": "पहला मैसेज तुम भेजो", "emoji": "💬", "word": "भेजो"}
+  ],
+  "cta": ["जिसका नाम अभी याद आया", "💌"],
+  "cta_sub": "उसे ये रील भेज दो, बस हाय के साथ",
+  "cta_word": "हाय",
+  "follow": "कमेंट करो: किसको हाय भेजा? 👇"
+ }
+}

@@ -85,7 +85,8 @@ def bed_audio(path, day, starts, total, cuts, pops, chimes):
     def add(sound, at, g=1.0):
         j = max(int(at * SR), 0)
         k = min(j + sound.size, n)
-        sfx[j:k] += sound[:k - j] * g
+        if k > j:  # a cue past the end of a short reel is skipped
+            sfx[j:k] += sound[:k - j] * g
 
     for t in cuts:
         add(cr.whoosh(0.45), t - 0.22, 0.9)
@@ -124,7 +125,9 @@ def build(day, proj, extras_path=None):
         starts.append(round(t, 3))
         lens.append(d)
         t += d
-    TAIL = 0.3                                # Veo blurs the very last frames of a clip
+    # Veo blurs the very last frames of a clip; some clips even dissolve into a new scene in the last ~0.5 s.
+    # script.json "edit": {"tail": seconds} cuts more (keep it after the last spoken word).
+    TAIL = float(ex.get("tail", 0.3))
     lens[-1] = round(lens[-1] - TAIL, 3)
     vid_end = round(t - TAIL, 3)
     total = round(vid_end + 1.6, 2)          # hold the last frame under the CTA
@@ -196,6 +199,9 @@ def build(day, proj, extras_path=None):
                   f'<div class="sttxt"><span class="stemo">{esc(st.get("emoji", ""))}</span>{esc(st["text"])}</div></div>')
     for k, at in enumerate(step_t):
         end = step_t[k + 1] if k + 1 < len(step_t) else cta_t
+        # leave before the next shot's captions start (they sit just below), but stay at least 1.6 s
+        nxt = min([c for c in cuts if c > at + 0.3], default=end)
+        end = min(end, max(nxt, at + 1.6))
         js.append(f'tl.fromTo("#st{k}",{{opacity:0,x:-80,scale:0.9}},{{opacity:1,x:0,scale:1,duration:0.45,'
                   f'ease:"back.out(1.6)"}},{T(at - 0.05)});')
         js.append(f'tl.to("#st{k}",{{opacity:0,x:60,duration:0.2,ease:"power2.in"}},{T(end - 0.25)});')
