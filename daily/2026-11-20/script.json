@@ -1,0 +1,32 @@
+{
+ "date": "2026-11-20",
+ "topic": "11. (apnapan, Raat 2 baje wali baatein) Dimaag ka tamasha - raat 2 baje purani baat yaad aana",
+ "hook": "Raat 2 baje dimaag ka tamasha",
+ "emotion": "soft, warm and playful like a close friend on a late-night call, a small amused smile, light humour",
+ "caption_line": "Dimaag ki ye adalat roz raat lagti hai na? 😅 Aaj case kal subah tak postpone 🌙",
+ "shots": [
+  {
+   "dialogue": "Raat do baje dimaag bolta hai, *paanch* saal pehle wali baat yaad hai na?",
+   "dialogue_hi": "रात दो बजे दिमाग़ बोलता है, *पाँच* साल पहले वाली बात याद है ना?"
+  },
+  {
+   "dialogue": "Haan wahi, jab sabke saamne *galat* jawab diya tha. Ab neend toh gayi.",
+   "dialogue_hi": "हाँ वही, जब सबके सामने *ग़लत* जवाब दिया था। अब नींद तो गई।"
+  },
+  {
+   "dialogue": "Dimaag ko bolo, *kal* subah sochenge. Ye baat kisi ko yaad nahi, sirf tumhe.",
+   "dialogue_hi": "दिमाग़ को बोलो, *कल* सुबह सोचेंगे। ये बात किसी को याद नहीं, सिर्फ़ तुम्हें।"
+  }
+ ],
+ "caption_lang": "hi",
+ "hook_hi": "रात 2 बजे दिमाग़ का तमाशा",
+ "edit": {
+  "hook": "रात 2 बजे पुरानी *बातें* याद आती हैं?",
+  "hook_sub": "तुम अकेले नहीं हो 😅👇",
+  "steps": [],
+  "cta": ["अपने ओवरथिंकर दोस्त को", "😅"],
+  "cta_sub": "टैग करो, वो भी जाग रहा होगा",
+  "cta_word": "सोचेंगे",
+  "follow": "कमेंट करो: तुम्हारी 2 बजे वाली बात? 👇"
+ }
+}
