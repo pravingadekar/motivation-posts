@@ -1,0 +1,41 @@
+{
+ "date": "2026-11-24",
+ "topic": "15. (apnapan script 6, Ghar wali baat) Result ke baad ki chuppi",
+ "hook": "Result mein naam nahi aaya?",
+ "emotion": "soft, gentle and caring like an elder sister sitting beside you, calm and reassuring, a small warm smile at the end",
+ "caption_line": "Ek list tumhari keemat tay nahi karti. Aaj bas saans lo 🤍",
+ "shots": [
+  {
+   "dialogue": "Result mein naam nahi, aur ghar mein sab *chup*. Wo chuppi sabse zyada chubhti hai.",
+   "dialogue_hi": "रिज़ल्ट में नाम नहीं, और घर में सब *चुप*। वो चुप्पी सबसे ज़्यादा चुभती है।"
+  },
+  {
+   "dialogue": "Par suno, ek *list* tumhari keemat tay nahi karti. Tumne padha, wo kahin nahi gaya.",
+   "dialogue_hi": "पर सुनो, एक *लिस्ट* तुम्हारी क़ीमत तय नहीं करती। तुमने पढ़ा, वो कहीं नहीं गया।"
+  },
+  {
+   "dialogue": "Aaj bas sabke saath *khaana* khao. Taiyaari kal se, aaj sirf saans lo.",
+   "dialogue_hi": "आज बस सबके साथ *खाना* खाओ। तैयारी कल से, आज सिर्फ़ साँस लो।"
+  }
+ ],
+ "caption_lang": "hi",
+ "hook_hi": "रिज़ल्ट में नाम नहीं आया?",
+ "edit": {
+  "hook": "रिज़ल्ट में *नाम* नहीं आया?",
+  "hook_sub": "आज के लिए बस इतना 👇",
+  "steps": [
+   {
+    "text": "आज सबके साथ खाना",
+    "emoji": "🍽️",
+    "word": "खाना"
+   }
+  ],
+  "cta": [
+   "जिसका रिज़ल्ट आज आया",
+   "💌"
+  ],
+  "cta_sub": "उसे भेजो, उसे अकेला मत छोड़ो",
+  "cta_word": "साँस",
+  "follow": "कमेंट करो: कौन सा एग्ज़ाम दे रहे हो? 👇"
+ }
+}
