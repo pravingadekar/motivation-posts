@@ -1,0 +1,41 @@
+{
+ "date": "2026-11-22",
+ "topic": "13. (apnapan script 4, Ghar wali baat) Mummy ka missed call",
+ "hook": "Mummy ka call kaata tha na?",
+ "emotion": "soft, warm and caring like a close friend gently teasing, then tender, a small smile",
+ "caption_line": "Unka \"khaana khaya?\" asal mein \"I love you\" hota hai 🤍",
+ "shots": [
+  {
+   "dialogue": "Mummy ka *call* aaya, tumne kaata, aur message kiya, busy hoon, baad mein.",
+   "dialogue_hi": "मम्मी का *कॉल* आया, तुमने काटा, और मैसेज किया, बिज़ी हूँ, बाद में।"
+  },
+  {
+   "dialogue": "Unhe kuch kaam nahi tha yaar. Bas *aawaz* sunni thi, khaana khaya ya nahi.",
+   "dialogue_hi": "उन्हें कुछ काम नहीं था यार। बस *आवाज़* सुननी थी, खाना खाया या नहीं।"
+  },
+  {
+   "dialogue": "Aaj tum *pehle* call karo, aur bas itna pucho, aapne khaana khaya?",
+   "dialogue_hi": "आज तुम *पहले* कॉल करो, और बस इतना पूछो, आपने खाना खाया?"
+  }
+ ],
+ "caption_lang": "hi",
+ "hook_hi": "मम्मी का कॉल काटा था ना?",
+ "edit": {
+  "hook": "मम्मी का *कॉल* काटा था ना?",
+  "hook_sub": "आज बस ये एक काम 👇",
+  "steps": [
+   {
+    "text": "आज तुम पहले कॉल करो",
+    "emoji": "📞",
+    "word": "पहले"
+   }
+  ],
+  "cta": [
+   "जो घर से दूर रहता है",
+   "💌"
+  ],
+  "cta_sub": "उसे भेजो, आज वो कॉल करेगा",
+  "cta_word": "खाया",
+  "follow": "कमेंट करो: आज कॉल किया? हाँ या ना 👇"
+ }
+}
