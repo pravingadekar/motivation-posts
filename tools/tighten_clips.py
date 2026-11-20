@@ -38,10 +38,12 @@ def speech_regions(path):
     d = len(a) / SR
     # Veo's last ~0.5 s is often a blur/dissolve into another scene: never use it
     regs = [(s, min(e, d - 0.6)) for s, e in regs if s < d - 0.6]
-    # a sound more than 1 s after the speech (breath, mic bump) is not part of the line
+    # a SHORT sound more than 1 s after the speech (breath, mic bump) is not part of the line;
+    # but if a lot of sound follows (> 0.6 s), it is the next sentence after a long pause: keep it
+    # (24 Nov 2026: "...सब चुप। <1 s pause> वो चुप्पी..." lost its second sentence)
     out = regs[:1]
-    for s, e in regs[1:]:
-        if s - out[-1][1] > 1.0:
+    for k, (s, e) in enumerate(regs[1:], 1):
+        if s - out[-1][1] > 1.0 and sum(b - a for a, b in regs[k:]) < 0.6:
             break
         out.append((s, e))
     return out, d
