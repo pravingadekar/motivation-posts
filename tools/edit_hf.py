@@ -135,7 +135,9 @@ def build(day, proj, extras_path=None):
     flat = [w for line in words for w in line]
     cuts = starts[1:]
     cta_word = ex.get("cta_word", "भेजो")
-    cta_t = next((t0 for w, t0, t1 in flat if cta_word in w), flat[-1][1])
+    # look for the CTA word in the LAST shot only (it may also be spoken earlier, e.g. "खाया" on 22 Nov)
+    cta_t = next((t0 for w, t0, t1 in flat if t0 >= starts[-1] - 0.05 and cta_word in w),
+                 next((t0 for w, t0, t1 in flat if cta_word in w), flat[-1][1]))
 
     el, js = [], []
     T = lambda v: f"{v:.3f}"  # noqa: E731

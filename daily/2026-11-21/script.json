@@ -1,0 +1,35 @@
+{
+ "date": "2026-11-21",
+ "topic": "12. (apnapan script 3, Ek chhoti kahani) Bus ki seat - achhai laut kar aati hai",
+ "hook": "Ek seat ne exam bacha liya",
+ "emotion": "soft, warm storyteller like telling a sweet little story to a close friend, gentle smile, a small pause before the last line",
+ "caption_line": "Jo roz chupchaap achha karta hai, uski kahani koi na koi zaroor sunata hai 🤍",
+ "shots": [
+  {
+   "dialogue": "Ek ladki roz *bus* mein ek budhi amma ke liye apni seat chhod deti thi.",
+   "dialogue_hi": "एक लड़की रोज़ *बस* में एक बूढ़ी अम्मा के लिए अपनी सीट छोड़ देती थी।"
+  },
+  {
+   "dialogue": "Exam wale din wo *late* thi, aur pehli baar bus ne ruk kar uska intezaar kiya.",
+   "dialogue_hi": "एग्ज़ाम वाले दिन वो *लेट* थी, और पहली बार बस ने रुककर उसका इंतज़ार किया।"
+  },
+  {
+   "dialogue": "Driver bola, amma roz tumhari baat karti hain. *Achhai* kabhi khaali nahi jaati.",
+   "dialogue_hi": "ड्राइवर बोला, अम्मा रोज़ तुम्हारी बात करती हैं। *अच्छाई* कभी ख़ाली नहीं जाती।"
+  }
+ ],
+ "caption_lang": "hi",
+ "hook_hi": "एक सीट ने एग्ज़ाम बचा लिया",
+ "edit": {
+  "hook": "एक *सीट* ने एग्ज़ाम बचा लिया",
+  "hook_sub": "आख़िर तक सुनो 👇",
+  "steps": [],
+  "cta": [
+   "जो सबकी मदद करता है",
+   "💌"
+  ],
+  "cta_sub": "उसे बताओ, उसकी अच्छाई लौटेगी",
+  "cta_word": "अच्छाई",
+  "follow": "कमेंट करो: कभी किसी अनजान ने मदद की? हाँ/ना 👇"
+ }
+}
