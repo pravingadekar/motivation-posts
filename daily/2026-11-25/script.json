@@ -1,0 +1,34 @@
+{
+ "date": "2026-11-25",
+ "topic": "16. (apnapan script 7, Aaj ki chhoti jeet) Shabaash",
+ "hook": "Aaj sirf nahaya? Tum jeet gaye",
+ "emotion": "soft, warm and playful like a best friend cheering you on, a gentle smile in the voice, a small proud laugh at the end",
+ "caption_line": "Har din mountain climb nahi hota. Kabhi bistar theek karna bhi jeet hai 🤍",
+ "shots": [
+  {
+   "dialogue": "Aaj tumne bas *bistar* theek kiya aur naha liye? Toh suno, aaj jeet gaye.",
+   "dialogue_hi": "आज तुमने बस *बिस्तर* ठीक किया और नहा लिए? तो सुनो, आज जीत गए।"
+  },
+  {
+   "dialogue": "Kuch din *bade* kaam ke nahi hote, bas khud ko sambhalne ke hote hain.",
+   "dialogue_hi": "कुछ दिन *बड़े* काम के नहीं होते, बस ख़ुद को सँभालने के होते हैं।"
+  },
+  {
+   "dialogue": "Toh aaj khud ko *shabaash* bolo. Haan, zor se. Main bhi bol rahi hoon, shabaash.",
+   "dialogue_hi": "तो आज ख़ुद को *शाबाश* बोलो। हाँ, ज़ोर से। मैं भी बोल रही हूँ, शाबाश।"
+  }
+ ],
+ "caption_lang": "hi",
+ "hook_hi": "आज सिर्फ़ नहाया? तुम जीत गए",
+ "edit": {
+  "hook": "आज बस *नहाया*? तुम जीत गए",
+  "hook_sub": "ये सुनो 👇",
+  "steps": [
+   {"text": "ख़ुद को शाबाश बोलो", "emoji": "👏", "word": "शाबाश"}
+  ],
+  "cta": ["जिसका आज मुश्किल दिन था", "💌"],
+  "cta_sub": "उसे भेजो, उसे शाबाश चाहिए",
+  "cta_word": "ज़ोर",
+  "follow": "कमेंट करो: आज की छोटी जीत? 👇"
+ }
+}
