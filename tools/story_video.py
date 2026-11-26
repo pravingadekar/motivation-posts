@@ -4,7 +4,7 @@
     python tools/story_video.py build CH_DIR    # needs CH_DIR/img/NN.png for each scene segment -> CH_DIR/chapter.mp4
     python tools/story_video.py join OUT.mp4 CH_DIR [CH_DIR ...]   # chapters -> full video
 
-CH_DIR/script.json: {"voice", "rate", "segments": [{"text", "scene"} | {"title"}]}. Segment NN is its 1-based index.
+CH_DIR/script.json: {"voice", "rate", "captions": true|false (Hindi subtitles at the bottom), "neutral": true|false (colour fix), "bg_anim": true (floating light particles over everything), "segments": [{"text", "scene"} | {"title"}]}. Segment NN is its 1-based index.
 Images: any size, cropped to 1920x1080. A missing image becomes a dark placeholder (for draft builds).
 Each scene gets a slow Ken Burns move; title segments are a 3.5 s card. Soft original music under the voice.
 """
@@ -86,7 +86,7 @@ def voice(ch):
             mp3 = os.path.join(out, f"{i:02d}.mp3")
             if not os.path.exists(mp3):
                 if v.startswith("sarvam:"):
-                    sarvam_tts(seg["text"], mp3, v.split(":", 1)[1], pace=float(s.get("pace", 0.9)))
+                    sarvam_tts(seg["text"], mp3, v.split(":", 1)[1], model=s.get("model", "bulbul:v3"), pace=float(s.get("pace", 0.9)))
                 else:
                     await edge_tts.Communicate(seg["text"], v, rate=s.get("rate", "-6%")).save(mp3)
             print(f"{i:02d}: {duration(mp3):.1f}s")
@@ -102,9 +102,10 @@ def neutral(im, amount=0.6):
     return im.point([min(255, round(i * gains[k])) for k in range(3) for i in range(256)])
 
 
-def fit(img_path):
+def fit(img_path, colorfix=True):
     if os.path.exists(img_path):
-        im = neutral(Image.open(img_path).convert("RGB"))
+        im = Image.open(img_path).convert("RGB")
+        im = neutral(im) if colorfix else im
         sc = max(W / im.width, H / im.height)
         im = im.resize((round(im.width * sc), round(im.height * sc)), Image.LANCZOS)
         l, t = (im.width - W) // 2, (im.height - H) // 2
@@ -120,6 +121,39 @@ def title_png(text, path):
            "height:4px;background:#e0a84a;border-radius:2px}")
     HT.W, HT.H = W, H
     HT._shot(HT.BASE % {"w": W, "h": H, "css": css, "body": f'<div class="t">{text}</div><div class="l"></div>'},
+             path)
+
+
+def caption_chunks(text, maxlen=42):
+    """Split narration into short on-screen lines (break after । ? ! , then at spaces)."""
+    import re
+    parts = [p.strip() for p in re.split(r"(?<=[।?!,])\s+", text.replace("...", "…")) if p.strip()]
+    out = []
+    for p in parts:
+        words, line = p.split(), ""
+        for w in words:
+            if line and len(line) + 1 + len(w) > maxlen:
+                out.append(line)
+                line = w
+            else:
+                line = f"{line} {w}".strip()
+        if line:
+            if out and len(out[-1]) + 1 + len(line) <= maxlen and not out[-1].endswith(("।", "?", "!")):
+                out[-1] += " " + line
+            else:
+                out.append(line)
+    return out
+
+
+def caption_card(text, path):
+    """Bottom subtitle on a transparent 1920x1080 PNG (white text, soft dark band)."""
+    import html as _h
+    css = (".b{position:absolute;left:0;right:0;bottom:70px;text-align:center}"
+           ".c{display:inline-block;max-width:1600px;padding:14px 34px;border-radius:18px;"
+           "background:rgba(0,0,0,.55);color:#fff;font-size:62px;line-height:1.35;"
+           "text-shadow:0 3px 10px rgba(0,0,0,.7)}")
+    HT.W, HT.H = W, H
+    HT._shot(HT.BASE % {"w": W, "h": H, "css": css, "body": f'<div class="b"><div class="c">{_h.escape(text)}</div></div>'},
              path)
 
 
@@ -145,7 +179,7 @@ def build(ch):
             mp3 = os.path.join(ch, "voice", f"{i:02d}.mp3")
             length = duration(mp3) + GAP
             src = os.path.join(tmp, f"s{i:02d}.png")
-            big = fit(os.path.join(ch, "img", f"{i:02d}.png")).resize((W * 2, H * 2), Image.LANCZOS)
+            big = fit(os.path.join(ch, "img", f"{i:02d}.png"), s.get("neutral", True)).resize((W * 2, H * 2), Image.LANCZOS)
             big.save(src)
             n = int(length * FPS) + 1
             # alternate zoom in / zoom out with a little drift
@@ -156,9 +190,24 @@ def build(ch):
             dx = "(iw-iw/zoom)/2" + ("+on*0.15" if i % 3 == 0 else "")
             vf = (f"zoompan=z='{z}':x='{dx}':y='(ih-ih/zoom)/2':d={n}:s={W}x{H}:fps={FPS},"
                   f"fade=in:0:9,fade=out:st={length - 0.3:.2f}:d=0.3,format=yuv420p")
-            run([FFMPEG, "-y", "-loop", "1", "-i", src, "-i", mp3, "-filter_complex",
-                 f"[0:v]{vf}[v];[1:a]apad,atrim=0:{length:.3f},aformat=sample_rates=44100:channel_layouts=stereo[a]",
-                 "-map", "[v]", "-map", "[a]", "-t", f"{length:.3f}",
+            caps, fc = [], f"[0:v]{vf}[v0]"
+            if s.get("captions"):
+                lines = caption_chunks(seg["text"])
+                speak = length - GAP
+                total = sum(len(x) for x in lines) or 1
+                t0 = 0.0
+                for k, line in enumerate(lines):
+                    t1 = t0 + speak * len(line) / total
+                    png = os.path.join(tmp, f"c{i:02d}_{k:02d}.png")
+                    if not os.path.exists(png):
+                        caption_card(line, png)
+                    caps += ["-i", png]
+                    fc += f";[v{k}][{k + 2}:v]overlay=0:0:enable='between(t,{t0:.2f},{t1:.2f})'[v{k + 1}]"
+                    t0 = t1
+            vlast = f"[v{len(caps) // 2}]"
+            run([FFMPEG, "-y", "-loop", "1", "-i", src, "-i", mp3, *caps, "-filter_complex",
+                 f"{fc};[1:a]apad,atrim=0:{length:.3f},aformat=sample_rates=44100:channel_layouts=stereo[a]",
+                 "-map", vlast, "-map", "[a]", "-t", f"{length:.3f}",
                  "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-c:a", "aac", part])
         parts.append(part)
         t += length
@@ -171,9 +220,22 @@ def build(ch):
     music = os.path.join(tmp, "music.wav")
     soft_music.main(music, t + 1)
     out = os.path.join(ch, "chapter.mp4")
-    run([FFMPEG, "-y", "-i", joined, "-i", music, "-filter_complex",
-         "[1:a]volume=0.10[m];[0:a][m]amix=inputs=2:duration=first:normalize=0[a]",
-         "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", out])
+    amix = f"[1:a]volume={s.get('music_vol', 0.10)}[m];[0:a][m]amix=inputs=2:duration=first:normalize=0[a]"
+    if s.get("bg_anim"):
+        # soft floating dust/bokeh loop screen-blended over the whole video (tools/bg_particles.py)
+        loop = os.path.join(tmp, "particles.mp4")
+        if not os.path.exists(loop):
+            import bg_particles
+            bg_particles.main(loop, 12.0)
+        op = float(s.get("bg_anim_opacity", 0.8))
+        run([FFMPEG, "-y", "-i", joined, "-i", music, "-stream_loop", "-1", "-i", loop, "-filter_complex",
+             f"[2:v]format=gbrp[p];[0:v]format=gbrp[b];[b][p]blend=all_mode=screen:all_opacity={op}:shortest=1,"
+             f"format=yuv420p[v];{amix}",
+             "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
+             "-c:a", "aac", "-b:a", "160k", "-shortest", out])
+    else:
+        run([FFMPEG, "-y", "-i", joined, "-i", music, "-filter_complex", amix,
+             "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", out])
     print(f"chapter: {t / 60:.1f} min -> {out}")
 
 
