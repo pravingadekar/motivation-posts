@@ -17,3 +17,4 @@
 2026-11-23 | #14 (apnapan script 5, Raat 2 baje / comparison, made 20 Nov on pravingadekar2023, 17.3 s edit) | Subah Instagram khola, mood off? | 22:00
 2026-11-24 | #15 (apnapan script 6, Ghar wali baat, made 20 Nov on gadekarfamily2026, 16.4 s edit) | Result mein naam nahi aaya? | 18:00
 2026-11-25 | #16 (apnapan script 7, Aaj ki chhoti jeet, Flow dishghule, tightened 18.1 s edit) | Aaj sirf nahaya? Tum jeet gaye | 20:45
+2026-11-26 | #17 (kadwa sach test P1, paisa, Flow dishghule, tightened 14.2 s edit) (kadwa sach test) | Jab paise nahi the | 18:00
