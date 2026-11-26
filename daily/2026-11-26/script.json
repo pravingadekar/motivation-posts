@@ -1,0 +1,32 @@
+{
+ "date": "2026-11-26",
+ "topic": "17. (kadwa sach test P1, Paisa aur badalte log) Paisa aaya, rishte laute",
+ "hook": "Jab paise nahi the",
+ "emotion": "slow, heavy, calm voice, a little hurt, like saying a bitter truth to a friend, small pause before the last line",
+ "caption_line": "Hum tab bhi wahi the, bas tab hamari keemat kisi ko dikhti nahi thi 🥀",
+ "shots": [
+  {
+   "dialogue": "Jab *paise* nahi the, tab hum bhi wahi the,",
+   "dialogue_hi": "जब *पैसे* नहीं थे, तब हम भी वही थे,"
+  },
+  {
+   "dialogue": "Bas logon ki nazar mein hamari *keemat* nahi thi.",
+   "dialogue_hi": "बस लोगों की नज़र में हमारी *कीमत* नहीं थी।"
+  },
+  {
+   "dialogue": "Aaj paisa aaya, to *rishte* bhi laut aaye.",
+   "dialogue_hi": "आज पैसा आया, तो *रिश्ते* भी लौट आए।"
+  }
+ ],
+ "caption_lang": "hi",
+ "hook_hi": "जब पैसे नहीं थे",
+ "edit": {
+  "hook": "जब *पैसे* नहीं थे...",
+  "hook_sub": "पूरा सुनना 👇",
+  "steps": [],
+  "cta": ["जो बुरे वक़्त में भी साथ था", "💌"],
+  "cta_sub": "उसे भेजो, वही असली अपना है",
+  "cta_word": "रिश्ते",
+  "follow": "कमेंट करो: सही बात? हाँ या ना 👇"
+ }
+}
