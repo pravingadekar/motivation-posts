@@ -18,3 +18,4 @@
 2026-11-24 | #15 (apnapan script 6, Ghar wali baat, made 20 Nov on gadekarfamily2026, 16.4 s edit) | Result mein naam nahi aaya? | 18:00
 2026-11-25 | #16 (apnapan script 7, Aaj ki chhoti jeet, Flow dishghule, tightened 18.1 s edit) | Aaj sirf nahaya? Tum jeet gaye | 20:45
 2026-11-26 | #17 (kadwa sach test P1, paisa, Flow dishghule, tightened 14.2 s edit) (kadwa sach test) | Jab paise nahi the | 18:00
+2026-11-26 | book summary #1 (long-form, Anand v4 voice, captions, bg animation) | Don't Believe Everything You Think: रात को दिमाग चलता रहता है? | 20:00 YT+FB
