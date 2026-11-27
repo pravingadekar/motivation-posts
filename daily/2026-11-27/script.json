@@ -1,0 +1,32 @@
+{
+ "date": "2026-11-27",
+ "topic": "18. (kadwa sach test R1, Rishtedaar / samaj) Bheed vs apne",
+ "hook": "Shaadi mein sab aayenge",
+ "emotion": "slow, heavy, calm voice, a little hurt, like saying a bitter truth to a friend, small pause before the last line",
+ "caption_line": "Shaadi ki bheed aur hospital ki kursi, dono mein farak hai 🥀",
+ "shots": [
+  {
+   "dialogue": "Shaadi mein sab aayenge, khana khayenge, *kamiyan* ginenge.",
+   "dialogue_hi": "शादी में सब आएँगे, खाना खाएँगे, *कमियाँ* गिनेंगे।"
+  },
+  {
+   "dialogue": "Par *aspatal* mein wahi aayega, jo sach mein apna hai.",
+   "dialogue_hi": "पर *अस्पताल* में वही आएगा, जो सच में अपना है।"
+  },
+  {
+   "dialogue": "Bheed dekhkar *rishte* mat ginna.",
+   "dialogue_hi": "भीड़ देखकर *रिश्ते* मत गिनना।"
+  }
+ ],
+ "caption_lang": "hi",
+ "hook_hi": "शादी में सब आएँगे",
+ "edit": {
+  "hook": "*शादी* में सब आएँगे...",
+  "hook_sub": "पूरा सुनना 👇",
+  "steps": [],
+  "cta": ["जो अस्पताल में साथ था", "💌"],
+  "cta_sub": "उसे भेजो, वही असली अपना है",
+  "cta_word": "रिश्ते",
+  "follow": "कमेंट करो: सही बात? हाँ या ना 👇"
+ }
+}
